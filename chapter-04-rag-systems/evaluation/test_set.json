@@ -1,0 +1,1057 @@
+{
+  "name": "AWB Regulatory Knowledge Assistant (MR-2026-038) RAGAS test set",
+  "version": "1.0",
+  "count": 150,
+  "questions": [
+    {
+      "id": "Q001",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 1"
+    },
+    {
+      "id": "Q002",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 2"
+    },
+    {
+      "id": "Q003",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 3"
+    },
+    {
+      "id": "Q004",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 4"
+    },
+    {
+      "id": "Q005",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 5"
+    },
+    {
+      "id": "Q006",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 6"
+    },
+    {
+      "id": "Q007",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 7"
+    },
+    {
+      "id": "Q008",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 8"
+    },
+    {
+      "id": "Q009",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 9"
+    },
+    {
+      "id": "Q010",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 10"
+    },
+    {
+      "id": "Q011",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 11"
+    },
+    {
+      "id": "Q012",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 12"
+    },
+    {
+      "id": "Q013",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 13"
+    },
+    {
+      "id": "Q014",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 14"
+    },
+    {
+      "id": "Q015",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 15"
+    },
+    {
+      "id": "Q016",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 16"
+    },
+    {
+      "id": "Q017",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 17"
+    },
+    {
+      "id": "Q018",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 18"
+    },
+    {
+      "id": "Q019",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 19"
+    },
+    {
+      "id": "Q020",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 20"
+    },
+    {
+      "id": "Q021",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 21"
+    },
+    {
+      "id": "Q022",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 22"
+    },
+    {
+      "id": "Q023",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 23"
+    },
+    {
+      "id": "Q024",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 24"
+    },
+    {
+      "id": "Q025",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 25"
+    },
+    {
+      "id": "Q026",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 26"
+    },
+    {
+      "id": "Q027",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 27"
+    },
+    {
+      "id": "Q028",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 28"
+    },
+    {
+      "id": "Q029",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 29"
+    },
+    {
+      "id": "Q030",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 30"
+    },
+    {
+      "id": "Q031",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 31"
+    },
+    {
+      "id": "Q032",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 32"
+    },
+    {
+      "id": "Q033",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 33"
+    },
+    {
+      "id": "Q034",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 34"
+    },
+    {
+      "id": "Q035",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 35"
+    },
+    {
+      "id": "Q036",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 36"
+    },
+    {
+      "id": "Q037",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 37"
+    },
+    {
+      "id": "Q038",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 38"
+    },
+    {
+      "id": "Q039",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 39"
+    },
+    {
+      "id": "Q040",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 40"
+    },
+    {
+      "id": "Q041",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 41"
+    },
+    {
+      "id": "Q042",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 42"
+    },
+    {
+      "id": "Q043",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 43"
+    },
+    {
+      "id": "Q044",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 44"
+    },
+    {
+      "id": "Q045",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 45"
+    },
+    {
+      "id": "Q046",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 46"
+    },
+    {
+      "id": "Q047",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 47"
+    },
+    {
+      "id": "Q048",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 48"
+    },
+    {
+      "id": "Q049",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 49"
+    },
+    {
+      "id": "Q050",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 50"
+    },
+    {
+      "id": "Q051",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 51"
+    },
+    {
+      "id": "Q052",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 52"
+    },
+    {
+      "id": "Q053",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 53"
+    },
+    {
+      "id": "Q054",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 54"
+    },
+    {
+      "id": "Q055",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 55"
+    },
+    {
+      "id": "Q056",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 56"
+    },
+    {
+      "id": "Q057",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 57"
+    },
+    {
+      "id": "Q058",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 58"
+    },
+    {
+      "id": "Q059",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 59"
+    },
+    {
+      "id": "Q060",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 60"
+    },
+    {
+      "id": "Q061",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 61"
+    },
+    {
+      "id": "Q062",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 62"
+    },
+    {
+      "id": "Q063",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 63"
+    },
+    {
+      "id": "Q064",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 64"
+    },
+    {
+      "id": "Q065",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 65"
+    },
+    {
+      "id": "Q066",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 66"
+    },
+    {
+      "id": "Q067",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 67"
+    },
+    {
+      "id": "Q068",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 68"
+    },
+    {
+      "id": "Q069",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 69"
+    },
+    {
+      "id": "Q070",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 70"
+    },
+    {
+      "id": "Q071",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 71"
+    },
+    {
+      "id": "Q072",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 72"
+    },
+    {
+      "id": "Q073",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 73"
+    },
+    {
+      "id": "Q074",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 74"
+    },
+    {
+      "id": "Q075",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 75"
+    },
+    {
+      "id": "Q076",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 76"
+    },
+    {
+      "id": "Q077",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 77"
+    },
+    {
+      "id": "Q078",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 78"
+    },
+    {
+      "id": "Q079",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 79"
+    },
+    {
+      "id": "Q080",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 80"
+    },
+    {
+      "id": "Q081",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 81"
+    },
+    {
+      "id": "Q082",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 82"
+    },
+    {
+      "id": "Q083",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 83"
+    },
+    {
+      "id": "Q084",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 84"
+    },
+    {
+      "id": "Q085",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 85"
+    },
+    {
+      "id": "Q086",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 86"
+    },
+    {
+      "id": "Q087",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 87"
+    },
+    {
+      "id": "Q088",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 88"
+    },
+    {
+      "id": "Q089",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 89"
+    },
+    {
+      "id": "Q090",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 90"
+    },
+    {
+      "id": "Q091",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 91"
+    },
+    {
+      "id": "Q092",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 92"
+    },
+    {
+      "id": "Q093",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 93"
+    },
+    {
+      "id": "Q094",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 94"
+    },
+    {
+      "id": "Q095",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 95"
+    },
+    {
+      "id": "Q096",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 96"
+    },
+    {
+      "id": "Q097",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 97"
+    },
+    {
+      "id": "Q098",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 98"
+    },
+    {
+      "id": "Q099",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 99"
+    },
+    {
+      "id": "Q100",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 100"
+    },
+    {
+      "id": "Q101",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 101"
+    },
+    {
+      "id": "Q102",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 102"
+    },
+    {
+      "id": "Q103",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 103"
+    },
+    {
+      "id": "Q104",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 104"
+    },
+    {
+      "id": "Q105",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 105"
+    },
+    {
+      "id": "Q106",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 106"
+    },
+    {
+      "id": "Q107",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 107"
+    },
+    {
+      "id": "Q108",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 108"
+    },
+    {
+      "id": "Q109",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 109"
+    },
+    {
+      "id": "Q110",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 110"
+    },
+    {
+      "id": "Q111",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 111"
+    },
+    {
+      "id": "Q112",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 112"
+    },
+    {
+      "id": "Q113",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 113"
+    },
+    {
+      "id": "Q114",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 114"
+    },
+    {
+      "id": "Q115",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 115"
+    },
+    {
+      "id": "Q116",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 116"
+    },
+    {
+      "id": "Q117",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 117"
+    },
+    {
+      "id": "Q118",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 118"
+    },
+    {
+      "id": "Q119",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 119"
+    },
+    {
+      "id": "Q120",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 120"
+    },
+    {
+      "id": "Q121",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 121"
+    },
+    {
+      "id": "Q122",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 122"
+    },
+    {
+      "id": "Q123",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 123"
+    },
+    {
+      "id": "Q124",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 124"
+    },
+    {
+      "id": "Q125",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 125"
+    },
+    {
+      "id": "Q126",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 126"
+    },
+    {
+      "id": "Q127",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 127"
+    },
+    {
+      "id": "Q128",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 128"
+    },
+    {
+      "id": "Q129",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 129"
+    },
+    {
+      "id": "Q130",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 130"
+    },
+    {
+      "id": "Q131",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 131"
+    },
+    {
+      "id": "Q132",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 132"
+    },
+    {
+      "id": "Q133",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 133"
+    },
+    {
+      "id": "Q134",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 134"
+    },
+    {
+      "id": "Q135",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 135"
+    },
+    {
+      "id": "Q136",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 136"
+    },
+    {
+      "id": "Q137",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 137"
+    },
+    {
+      "id": "Q138",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 138"
+    },
+    {
+      "id": "Q139",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 139"
+    },
+    {
+      "id": "Q140",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 140"
+    },
+    {
+      "id": "Q141",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for mortgage arrears handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 141"
+    },
+    {
+      "id": "Q142",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs SME lending disclosures?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 142"
+    },
+    {
+      "id": "Q143",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to PEP screening, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 143"
+    },
+    {
+      "id": "Q144",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to cloud outsourcing under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 144"
+    },
+    {
+      "id": "Q145",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat model risk documentation for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 145"
+    },
+    {
+      "id": "Q146",
+      "category": "consumer_duty",
+      "question_type": "definition",
+      "question": "What are the FCA Consumer Duty requirements for complaints handling?",
+      "ground_truth_source": "FCA Consumer Duty \u2014 synthetic reference answer 146"
+    },
+    {
+      "id": "Q147",
+      "category": "prudential",
+      "question_type": "citation",
+      "question": "Which section of PRA Rulebook / CRR3 governs transaction monitoring thresholds?",
+      "ground_truth_source": "PRA Rulebook / CRR3 \u2014 synthetic reference answer 147"
+    },
+    {
+      "id": "Q148",
+      "category": "aml",
+      "question_type": "applicability",
+      "question": "Does MLR 2017 / POCA apply to customer vulnerability assessment, and under what conditions?",
+      "ground_truth_source": "MLR 2017 / POCA \u2014 synthetic reference answer 148"
+    },
+    {
+      "id": "Q149",
+      "category": "operational_resilience",
+      "question_type": "deadline",
+      "question": "What reporting deadline applies to intraday liquidity reporting under PS21/3 Operational Resilience?",
+      "ground_truth_source": "PS21/3 Operational Resilience \u2014 synthetic reference answer 149"
+    },
+    {
+      "id": "Q150",
+      "category": "data_protection",
+      "question_type": "interpretation",
+      "question": "How does UK GDPR / DPA 2018 treat third-party ICT providers for a UK retail bank?",
+      "ground_truth_source": "UK GDPR / DPA 2018 \u2014 synthetic reference answer 150"
+    }
+  ]
+}
