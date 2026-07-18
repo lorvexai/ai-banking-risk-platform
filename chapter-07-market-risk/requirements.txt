@@ -1,0 +1,9 @@
+# Chapter 7 — Market Risk Automation Platform
+# AWB-AI-2025 Programme | awb_commons
+# Python 3.11+
+
+numpy>=1.26.0
+pandas>=2.1.0
+httpx>=0.26.0
+pytest>=7.4.0
+scipy>=1.11.0

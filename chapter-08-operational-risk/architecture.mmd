@@ -1,0 +1,27 @@
+flowchart TD
+  T["chapter-08-operational-risk Architecture"]
+  M1["awb_commons"]
+  T --> M1
+  M2["awb_commons.audit"]
+  T --> M2
+  M3["awb_commons.llm_client"]
+  T --> M3
+  M4["awb_commons.models"]
+  T --> M4
+  M5["credit_fraud"]
+  T --> M5
+  M6["credit_fraud.scorer"]
+  T --> M6
+  M7["op_loss_detection"]
+  T --> M7
+  M8["op_loss_detection.nlp_extractor"]
+  T --> M8
+  M9["op_loss_detection.sma_calculator"]
+  T --> M9
+  M10["payment_fraud"]
+  T --> M10
+  M11["payment_fraud.detector"]
+  T --> M11
+  M6 --> M1
+  M8 --> M1
+  M11 --> M1

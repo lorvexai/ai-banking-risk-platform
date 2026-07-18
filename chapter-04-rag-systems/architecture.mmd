@@ -1,0 +1,31 @@
+flowchart TD
+  T["chapter-04-rag-systems Architecture"]
+  M1["access_control"]
+  T --> M1
+  M2["access_control.access_control"]
+  T --> M2
+  M3["awb_commons"]
+  T --> M3
+  M4["awb_commons.rag"]
+  T --> M4
+  M5["awb_commons.rag.hybrid_router"]
+  T --> M5
+  M6["awb_commons.rag.supersession_detector"]
+  T --> M6
+  M7["evaluation"]
+  T --> M7
+  M8["evaluation.ragas_evaluator"]
+  T --> M8
+  M9["rag_assistant"]
+  T --> M9
+  M10["rag_assistant.document_loader"]
+  T --> M10
+  M11["rag_assistant.query_engine"]
+  T --> M11
+  M12["rag_assistant.vector_store"]
+  T --> M12
+  M1 --> M2
+  M4 --> M5
+  M9 --> M10
+  M9 --> M11
+  M11 --> M9

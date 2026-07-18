@@ -1,0 +1,21 @@
+# AWB Credit Document Analyser — Chapter 2
+# Python dependencies
+
+# Google Gemini 3.1 Pro — LLM provider (large context for full document processing)
+google-generativeai>=0.8.0
+
+# Pydantic — structured output validation and financial data schemas
+pydantic>=2.6.0
+
+# PDF extraction
+pymupdf>=1.24.0
+
+# Word document extraction
+python-docx>=1.1.0
+
+# Testing
+pytest>=8.0.0
+pytest-cov>=4.1.0
+
+# Optional: PostgreSQL for production audit log
+# psycopg2-binary>=2.9.0

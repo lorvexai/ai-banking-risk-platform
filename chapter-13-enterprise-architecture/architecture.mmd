@@ -1,0 +1,26 @@
+flowchart TD
+  T["chapter-13-enterprise-architecture Architecture"]
+  M1["awb_commons"]
+  T --> M1
+  M2["awb_commons.app_factory"]
+  T --> M2
+  M3["awb_commons.auth"]
+  T --> M3
+  M4["awb_commons.circuit_breaker"]
+  T --> M4
+  M5["awb_commons.db_client"]
+  T --> M5
+  M6["awb_commons.llm_factory"]
+  T --> M6
+  M7["awb_commons.logging_client"]
+  T --> M7
+  M8["awb_commons.t24_client"]
+  T --> M8
+  M9["kafka"]
+  T --> M9
+  M10["kafka.topics"]
+  T --> M10
+  M11["terraform"]
+  T --> M11
+  M2 --> M3
+  M2 --> M7

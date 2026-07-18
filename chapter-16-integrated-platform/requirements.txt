@@ -1,0 +1,15 @@
+# Chapter 16 — AWB Integrated AI Risk Platform
+# Install: pip install -r requirements.txt
+#
+# Python 3.11+ required
+# AWS CLI v2 required for deploy_service.sh
+
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+httpx==0.27.0
+pydantic==2.7.0
+pydantic-settings==2.3.0
+psycopg2-binary==2.9.9
+python-jose[cryptography]==3.3.0
+pytest==8.2.0
+pytest-asyncio==0.23.6

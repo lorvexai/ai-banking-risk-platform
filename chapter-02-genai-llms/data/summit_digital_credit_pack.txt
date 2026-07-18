@@ -1,0 +1,48 @@
+[PAGE 1]
+
+CREDIT PACK — DRAFT (Management Accounts — Unaudited)
+Avon & Wessex Bank plc
+Date: 5 June 2026
+
+BORROWER: Summit Digital Services Ltd
+Company Registration: 10234567
+Registered Address: 12 Science Park, Cambridge, CB4 0WA
+Sector: Technology — SaaS and digital transformation consulting
+
+FACILITY REQUEST
+Term Loan: £1,500,000
+Purpose: Product development and headcount investment
+
+[PAGE 2]
+
+FINANCIAL SUMMARY — SUMMIT DIGITAL SERVICES
+
+Period: 9 months ended 30 September 2025 (Management Accounts — unaudited)
+Note: Full-year audited accounts not yet available (audit in progress).
+
+INCOME STATEMENT (9 months)             £000s
+Revenue                                 4,200
+Direct Costs                           (2,800)
+Gross Profit                            1,400
+
+Note: EBITDA not separately disclosed in management accounts.
+Operating costs include £180k depreciation (estimated) and £240k
+share-based payments. Management indicated adjusted EBITDA of
+approximately £350k-£450k but formal calculation not provided.
+
+BALANCE SHEET (as at 30 Sep 2025)      £000s
+Fixed Assets (net)                        920
+Current Assets
+  Debtors                               1,100
+  Cash                                    450
+Total Current Assets                    1,550
+
+Bank Loan                               1,200
+Trade Creditors                           680
+Other Creditors                           320
+Total Liabilities                       2,200
+
+Net Assets/(Deficit)                      270
+
+Note: No formal leverage or interest cover ratios provided.
+Cash burn rate approximately £85k/month (management estimate).

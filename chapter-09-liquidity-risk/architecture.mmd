@@ -1,0 +1,21 @@
+flowchart TD
+  T["chapter-09-liquidity-risk Architecture"]
+  M1["awb_commons"]
+  T --> M1
+  M2["awb_commons.models"]
+  T --> M2
+  M3["cash_flow"]
+  T --> M3
+  M4["cash_flow.forecaster"]
+  T --> M4
+  M5["intraday_liquidity"]
+  T --> M5
+  M6["intraday_liquidity.monitor"]
+  T --> M6
+  M7["lcr_nsfr"]
+  T --> M7
+  M8["lcr_nsfr.calculator"]
+  T --> M8
+  M4 --> M1
+  M6 --> M1
+  M8 --> M1

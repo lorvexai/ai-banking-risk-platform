@@ -1,0 +1,20 @@
+flowchart TD
+  T["chapter-15-data-infrastructure Architecture"]
+  M1["customer_360"]
+  T --> M1
+  M2["customer_360.identity_resolver"]
+  T --> M2
+  M3["customer_360.profile_builder"]
+  T --> M3
+  M4["feature_store"]
+  T --> M4
+  M5["feature_store.feature_store_client"]
+  T --> M5
+  M6["governance"]
+  T --> M6
+  M7["governance.retention_policy"]
+  T --> M7
+  M8["risk_warehouse"]
+  T --> M8
+  M9["risk_warehouse.bcbs239_monitor"]
+  T --> M9

@@ -1,0 +1,26 @@
+flowchart TD
+  T["Chapter_10_Code Architecture"]
+  M1["ab_testing"]
+  T --> M1
+  M2["ab_testing.platform"]
+  T --> M2
+  M3["awb_commons"]
+  T --> M3
+  M4["awb_commons.models"]
+  T --> M4
+  M5["credit_validation"]
+  T --> M5
+  M6["credit_validation.validator"]
+  T --> M6
+  M7["llm_monitoring"]
+  T --> M7
+  M8["llm_monitoring.monitor"]
+  T --> M8
+  M9["model_inventory"]
+  T --> M9
+  M10["model_inventory.registry"]
+  T --> M10
+  M2 --> M3
+  M6 --> M3
+  M8 --> M3
+  M10 --> M3

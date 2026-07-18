@@ -1,0 +1,11 @@
+﻿flowchart TD
+  A["Customer (Web/App/IVR)"] --> B["API Gateway (auth + rate limit)"]
+  B --> C["Session Manager (Redis 30min TTL)"]
+  C --> D["Intent Classifier (Gemini 3.5 Flash) - classifier.py"]
+  D -->|Complaint or Account Change| E["Immediate Escalation (FCA Consumer Duty)"]
+  D --> F["Grounding Data Fetch (T24 / product catalogue)"]
+  F --> G["Response Generator (Gemini 3.5 Flash) - response_generator.py"]
+  G --> H["FCA Compliance Filter - compliance_filter.py"]
+  H --> I["Audit Log (PostgreSQL/SQLite 7yr) - audit_log.py"]
+  I --> J["Customer"]
+  E --> I

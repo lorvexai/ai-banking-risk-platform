@@ -1,0 +1,99 @@
+EUROPEAN PARLIAMENT AND OF THE COUNCIL
+Regulation (EU) 2024/1689
+Artificial Intelligence Act
+June 2024
+
+DOCUMENT METADATA
+Regulator: European Commission / European AI Office
+Document Reference: EU AI Act 2024 — Annex III and Articles 9–14
+Effective Date: 2 August 2024 (entry into force); phased application 2025–2026
+Applicable to: Providers and deployers of AI systems in the EU; UK firms placing AI systems on the EU market
+
+---
+
+ANNEX III: HIGH-RISK AI SYSTEMS REFERRED TO IN ARTICLE 6(2)
+
+The following AI systems shall be considered high-risk for the purposes of this Regulation:
+
+1. BIOMETRIC IDENTIFICATION AND CATEGORISATION
+
+AI systems intended to be used for real-time and post-remote biometric identification of natural persons, except where the use is necessary for law enforcement purposes subject to specific conditions set out in Article 5.
+
+2. CRITICAL INFRASTRUCTURE
+
+AI systems intended to be used as safety components in the management and operation of critical digital infrastructure, road traffic, or the supply of water, gas, heating or electricity.
+
+3. EDUCATION AND VOCATIONAL TRAINING
+
+AI systems intended to be used for the purpose of determining access or assigning natural persons to educational or vocational training institutions or programmes.
+
+4. EMPLOYMENT, WORKERS MANAGEMENT AND ACCESS TO SELF-EMPLOYMENT
+
+AI systems intended to be used for recruitment or selection of natural persons, in particular for advertising vacancies, screening or filtering applications, and evaluating candidates in the course of interviews or assessments.
+
+5. ACCESS TO AND ENJOYMENT OF ESSENTIAL PRIVATE SERVICES AND ESSENTIAL PUBLIC SERVICES AND BENEFITS
+
+5.1 AI systems intended to be used by or on behalf of competent authorities or by Union institutions, agencies, offices or bodies to evaluate the eligibility of natural persons for essential public assistance benefits and services, including healthcare services, as well as to grant, reduce, revoke, or reclaim such benefits and services.
+
+5.2 AI systems intended to be used to evaluate the creditworthiness of natural persons or establish their credit score, with the exception of AI systems used for the purpose of detecting financial fraud.
+
+AI systems used in credit scoring, including those employing large language models, machine learning classifiers, or generative AI to inform or make lending decisions affecting retail or SME customers, are explicitly classified as high-risk AI systems under this provision. This applies irrespective of whether the AI system makes the final decision or provides a recommendation to a human decision-maker.
+
+6. LAW ENFORCEMENT
+
+AI systems intended to be used by or on behalf of competent authorities for individual risk assessments, including assessments of the risk of a natural person offending or reoffending, polygraphs and similar tools, deep fakes detection, profiling of natural persons, and crime analytics.
+
+7. MIGRATION, ASYLUM AND BORDER CONTROL MANAGEMENT
+
+AI systems intended to be used by competent authorities as polygraphs and similar tools or to detect the emotional state of a natural person, to assess risks including the security risk, the risk of irregular immigration or health risk, to verify the authenticity of the relevant documents of natural persons.
+
+8. ADMINISTRATION OF JUSTICE AND DEMOCRATIC PROCESSES
+
+AI systems intended to be used by or on behalf of competent authorities to assist a judicial authority in researching and interpreting facts and the law and in applying the law to a concrete set of facts, or used in a similar way in alternative dispute resolution.
+
+---
+
+ARTICLE 9: RISK MANAGEMENT SYSTEM
+
+9.1 Providers of high-risk AI systems shall establish, implement, document, and maintain a risk management system. The risk management system shall be a continuous iterative process run throughout the entire lifecycle of a high-risk AI system.
+
+9.2 The risk management system shall comprise the following steps:
+
+(a) Identification and analysis of the known and reasonably foreseeable risks that the high-risk AI system can pose to health, safety, or fundamental rights when used in accordance with its intended purpose;
+(b) Estimation and evaluation of the risks that may emerge when the high-risk AI system is used in accordance with its intended purpose, and under conditions of reasonably foreseeable misuse;
+(c) Evaluation of other possibly arising risks based on the analysis of data gathered from the post-market monitoring system;
+(d) Adoption of appropriate and targeted risk management measures designed to address the risks identified pursuant to points (a) and (b).
+
+---
+
+ARTICLE 13: TRANSPARENCY AND PROVISION OF INFORMATION TO DEPLOYERS
+
+13.1 High-risk AI systems shall be designed and developed in such a way as to ensure that their operation is sufficiently transparent to enable deployers to interpret the system's output and use it appropriately. An appropriate type and degree of transparency shall be ensured, with a view to achieving compliance with the relevant obligations of the deployer set out in Article 26.
+
+13.2 High-risk AI systems shall be accompanied by instructions for use in an appropriate digital format or otherwise. Those instructions shall include the following information:
+
+(a) The identity and contact details of the provider and, where applicable, of the provider's authorised representative;
+(b) The characteristics, capabilities, and limitations of the high-risk AI system, including its accuracy, robustness, and cybersecurity performance;
+(c) The changes to the high-risk AI system and its performance which have been pre-determined by the provider at the moment of the initial conformity assessment, if any;
+(d) The human oversight measures, including the technical measures to facilitate the interpretation of the outputs of high-risk AI systems by the deployers.
+
+---
+
+ARTICLE 14: HUMAN OVERSIGHT
+
+14.1 High-risk AI systems shall be designed and developed in such a way, including with appropriate human-machine interface tools, that they can be effectively overseen by natural persons during the period in which they are in use.
+
+14.2 Human oversight shall aim to prevent or minimise the risks to health, safety or fundamental rights that may emerge when a high-risk AI system is used in accordance with its intended purpose or under conditions of reasonably foreseeable misuse, in particular when such risks persist notwithstanding the application of other requirements set out in this Chapter.
+
+14.3 Human oversight shall be ensured through either one or both of the following types of measures:
+
+(a) Measures identified and built into the high-risk AI system by the provider before it is placed on the market or put into service;
+(b) Measures that the deployer is required to implement.
+
+14.4 For the purpose of implementing paragraph 3, the high-risk AI system shall be provided to the deployer with the possibility to:
+
+(a) Fully understand the capabilities and limitations of the high-risk AI system and be able to duly monitor its operation;
+(b) Be aware of the possible tendency of automatically relying or over-relying on the output produced by a high-risk AI system;
+(c) Be able to correctly interpret the high-risk AI system's output, taking into account the characteristics of the tools and methods available for that purpose;
+(d) Decide, in any particular situation, not to use the high-risk AI system or to otherwise disregard, override, or reverse the output of the high-risk AI system;
+(e) Be able to intervene on the operation of the high-risk AI system or interrupt the system through a stop button or a similar procedure.

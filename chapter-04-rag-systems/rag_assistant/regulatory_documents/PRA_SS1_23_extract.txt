@@ -1,0 +1,121 @@
+PRUDENTIAL REGULATION AUTHORITY
+Supervisory Statement SS1/23
+Model Risk Management Principles for Banks
+February 2023
+
+DOCUMENT METADATA
+Regulator: PRA
+Document Reference: SS1/23
+Effective Date: 17 May 2023
+Supersedes: SS3/18 (Model Risk Management)
+Applicable to: PRA-regulated banks, building societies, and designated investment firms
+
+---
+
+SECTION 1: INTRODUCTION AND SCOPE
+
+1.1 Purpose
+
+This Supervisory Statement (SS) sets out the Prudential Regulation Authority's (PRA) expectations for the sound management of model risk across PRA-regulated firms. It applies to all models used to inform material business decisions, including pricing, risk measurement, capital calculation, regulatory reporting, and customer-facing applications.
+
+1.2 Scope of Application
+
+The PRA expects firms to apply a proportionate approach to model risk management. The scope of this SS encompasses:
+
+(a) Statistical and algorithmic models used in credit risk, market risk, liquidity risk, and operational risk management;
+(b) Artificial intelligence and machine learning (AI/ML) systems used to support or make decisions affecting customers, capital, or regulatory compliance;
+(c) Vendor-supplied and third-party models incorporated into the firm's decision-making processes;
+(d) Automated decision-making systems that substitute for or supplement human judgement.
+
+1.3 Definition of a Model
+
+For the purposes of this SS, a model is defined as a quantitative method, system, or approach that applies statistical, economic, financial, or mathematical theories, techniques, or assumptions to process input data into quantitative estimates. This definition explicitly includes large language models (LLMs) and generative AI systems when deployed in material decision-making contexts.
+
+---
+
+SECTION 2: MODEL RISK MANAGEMENT FRAMEWORK
+
+2.1 Governance Requirements
+
+Firms are expected to maintain a comprehensive Model Risk Management (MRM) framework that includes:
+
+(a) A complete and current model inventory, maintained by the model risk function, listing all models in production, their purpose, owners, risk ratings, and validation status;
+(b) Clear accountability at Board and senior management level for model risk appetite, with the Chief Risk Officer (CRO) holding ultimate responsibility;
+(c) Three-lines-of-defence governance: first line (model developers and owners), second line (model risk function), and third line (internal audit);
+(d) Documented model approval workflows, including pre-deployment validation by an independent second-line function.
+
+2.2 Model Risk Rating
+
+The PRA expects firms to assign each model a risk rating reflecting the potential impact of model errors on the firm's financial position, regulatory compliance, or customer outcomes. Risk ratings should be reviewed at least annually and following material model changes. The PRA considers the following factors relevant to model risk rating:
+
+(a) Materiality of decisions informed or made by the model;
+(b) Complexity of the model methodology;
+(c) Data quality and availability risks;
+(d) Degree of human oversight over model outputs;
+(e) Regulatory sensitivity of the application.
+
+---
+
+SECTION 3: VALIDATION REQUIREMENTS
+
+3.1 Independent Validation
+
+All models rated medium or high risk must undergo independent validation prior to deployment and at least annually thereafter. Independent validation must be performed by a function separate from model development, with appropriate expertise and no conflict of interest.
+
+3.2 Validation Standards
+
+Model validation must cover:
+
+(a) Conceptual soundness: assessment of the model's theoretical basis and the appropriateness of assumptions;
+(b) Data quality: examination of input data completeness, accuracy, and representativeness;
+(c) Outcome testing: comparison of model predictions against realised outcomes, including backtesting where applicable;
+(d) Sensitivity analysis: assessment of model outputs under stressed inputs and alternative assumptions;
+(e) Benchmarking: comparison against alternative models or industry standards where available.
+
+3.3 AI/ML-Specific Validation
+
+For AI/ML models, including LLMs, the PRA expects additional validation steps:
+
+(a) Explainability assessment: the ability to explain individual predictions to affected parties, including customers and regulators;
+(b) Bias and fairness testing: examination of model outputs across protected characteristics as defined under the Equality Act 2010;
+(c) Adversarial robustness: testing of model performance under inputs designed to elicit incorrect or harmful outputs;
+(d) Concept drift monitoring: ongoing surveillance of model performance as real-world conditions evolve.
+
+---
+
+SECTION 4: ONGOING MONITORING
+
+4.1 Performance Monitoring
+
+Firms must implement ongoing monitoring of model performance, including:
+
+(a) Regular comparison of model outputs against realised outcomes (backtesting);
+(b) Monitoring of input data quality and distributional shifts (data drift);
+(c) Threshold-based alerts for material performance deterioration;
+(d) Periodic review of model assumptions in light of market, economic, or regulatory developments.
+
+4.2 Audit Trail Requirements
+
+The PRA expects firms to maintain comprehensive audit trails for all model decisions, including:
+
+(a) Input data used for each model run;
+(b) Model version and parameters applied;
+(c) Output generated, including any confidence intervals or uncertainty estimates;
+(d) Any human override or intervention applied to model outputs;
+(e) Retention of audit records for a minimum of seven years.
+
+---
+
+SECTION 5: REGULATORY REPORTING
+
+5.1 Model Inventory Reporting
+
+Firms must be able to provide the PRA with a complete model inventory on request, including the information specified in Annex 1 to this SS. Firms are expected to maintain this inventory in a form suitable for submission to supervisors within five business days of a request.
+
+5.2 Material Model Changes
+
+Firms must notify the PRA prior to deploying material changes to models used in regulatory capital calculation, IFRS 9 provisioning, or stress testing. For other material models, firms must maintain records of model changes and make these available to the PRA on request.
+
+5.3 AI System Registration
+
+With effect from 17 May 2023, all AI/ML systems deployed in material decision-making contexts must be registered in the firm's model inventory. The PRA expects the inventory entry for AI/ML systems to include: the model's purpose, the regulatory or business decisions it informs, the training data provenance, the validation approach, and the human oversight mechanism.

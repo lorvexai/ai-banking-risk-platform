@@ -1,0 +1,112 @@
+EUROPEAN PARLIAMENT AND OF THE COUNCIL
+Regulation (EU) 2022/2554
+Digital Operational Resilience Act (DORA)
+December 2022
+
+DOCUMENT METADATA
+Regulator: European Banking Authority (EBA) / European Securities and Markets Authority (ESMA)
+Document Reference: DORA — Articles 5–16 (ICT Risk Management)
+Effective Date: 17 January 2025
+Applicable to: Credit institutions, investment firms, insurance undertakings, and other financial entities operating in the EU; UK firms with EU operations
+
+---
+
+CHAPTER II: ICT RISK MANAGEMENT
+
+ARTICLE 5: GOVERNANCE AND ORGANISATION
+
+5.1 Financial entities shall have in place a sound, comprehensive and well-documented ICT risk management framework as part of their overall risk management system, which enables them to address ICT risk quickly, efficiently and comprehensively and to ensure a high level of digital operational resilience.
+
+5.2 The management body of the financial entity shall define, approve, oversee and be responsible for the implementation of all arrangements related to the ICT risk management framework. For this purpose, the management body shall:
+
+(a) Bear ultimate responsibility for managing the financial entity's ICT risk;
+(b) Establish policies that aim to ensure the maintenance of high standards of availability, authenticity, integrity and confidentiality of data;
+(c) Set clear roles and responsibilities for all ICT-related functions and establish appropriate governance arrangements to ensure effective and timely communication, cooperation and coordination among those functions;
+(d) Ensure the appropriate allocation of ICT investments and budget for ICT security.
+
+5.3 Financial entities shall regularly update their ICT risk management framework. The ICT risk management framework shall be subject to internal audit at least annually.
+
+---
+
+ARTICLE 6: ICT RISK MANAGEMENT FRAMEWORK
+
+6.1 Financial entities shall have in place a robust and comprehensive ICT risk management framework that includes strategies, policies, procedures, ICT protocols and tools necessary to protect all information assets and ICT assets, including computer software, hardware, servers, as well as to protect all relevant physical components and infrastructures, such as premises, data centres and sensitive designated areas.
+
+6.2 As part of the ICT risk management framework referred to in paragraph 1, financial entities shall implement policies on:
+
+(a) ICT security, including network and infrastructure security, endpoint security, application security, and data security;
+(b) Third-party ICT risk management, including the assessment and monitoring of ICT third-party service providers;
+(c) ICT-related incident management, including detection, classification, reporting, and resolution;
+(d) Business continuity and disaster recovery, including the testing of continuity plans and recovery objectives.
+
+6.3 For the purposes of managing ICT risk associated with artificial intelligence systems, financial entities shall ensure that:
+
+(a) AI systems are subject to the same ICT risk management framework as other critical ICT assets;
+(b) AI system dependencies, including dependencies on external model providers and cloud infrastructure, are identified and assessed as part of the ICT risk assessment process;
+(c) Concentration risk arising from the use of a small number of AI model providers is identified and managed, with contingency arrangements in place for provider unavailability.
+
+---
+
+ARTICLE 8: IDENTIFICATION
+
+8.1 Financial entities shall implement a process to identify and document all ICT assets, including AI systems and their dependencies. This process shall include:
+
+(a) Maintaining a current inventory of all ICT assets, including AI systems, software libraries, and data assets;
+(b) Classifying ICT assets according to their criticality and sensitivity;
+(c) Identifying and documenting dependencies between ICT assets, including dependencies on third-party providers;
+(d) Conducting regular reviews of the ICT asset inventory to ensure it remains current and accurate.
+
+8.2 Financial entities shall identify all sources of ICT risk, including risks arising from AI systems, and shall assess the potential impact of ICT disruptions on the financial entity's ability to deliver critical functions.
+
+---
+
+ARTICLE 10: PROTECTION AND PREVENTION
+
+10.1 Financial entities shall put in place appropriate ICT security policies, procedures, protocols, and tools. This shall include:
+
+(a) Implementation of access controls and authentication mechanisms, including privileged access management;
+(b) Encryption of data in transit and at rest, including data processed by AI systems;
+(c) Secure development and deployment practices for AI systems, including code review, vulnerability testing, and supply chain security;
+(d) Monitoring of AI system behaviour to detect anomalous outputs or adversarial inputs.
+
+---
+
+ARTICLE 11: DETECTION
+
+11.1 Financial entities shall put in place mechanisms to promptly detect anomalous activities, including ICT-related incidents and known vulnerabilities. For AI systems, detection mechanisms shall include:
+
+(a) Monitoring of AI model performance metrics to detect model drift or degradation;
+(b) Alerting on anomalous patterns in AI system inputs or outputs that may indicate adversarial activity;
+(c) Monitoring of AI system infrastructure for signs of compromise or unauthorised access;
+(d) Integration of AI system monitoring with the financial entity's broader ICT security operations.
+
+---
+
+ARTICLE 15: THIRD-PARTY ICT RISK MANAGEMENT
+
+15.1 Financial entities shall manage ICT risks associated with third-party ICT service providers, including providers of AI systems and AI model APIs. This requires:
+
+(a) Conducting due diligence on AI model providers before deployment, including assessment of the provider's security practices, data handling, and business continuity arrangements;
+(b) Maintaining contractual rights to audit and test AI model providers relevant to the financial entity's use of the provider's services;
+(c) Monitoring the ongoing performance and security of AI model providers;
+(d) Ensuring that concentration risk from reliance on a small number of AI model providers is within the financial entity's risk appetite, and that contingency arrangements are in place.
+
+15.2 Financial entities shall ensure that contracts with AI model providers include provisions:
+
+(a) Specifying the expected service levels, including availability, performance, and data security;
+(b) Requiring notification of material changes to the AI model, including changes to training data, model architecture, or safety measures;
+(c) Providing the financial entity with the right to terminate the contract in the event of a material breach of security or data protection obligations;
+(d) Specifying data residency and data handling requirements, including restrictions on the use of financial entity data for AI model training.
+
+---
+
+ARTICLE 16: BUSINESS CONTINUITY AND DISASTER RECOVERY
+
+16.1 Financial entities shall implement ICT business continuity policies and plans that cover AI system dependencies. This includes:
+
+(a) Identifying and documenting the AI systems that support critical business functions;
+(b) Defining recovery time objectives (RTOs) and recovery point objectives (RPOs) for critical AI systems;
+(c) Implementing and testing failover arrangements for critical AI systems, including the ability to revert to manual processes in the event of AI system unavailability;
+(d) Documenting and testing procedures for switching between AI model providers in the event of provider unavailability.
+
+16.2 Financial entities shall test their ICT business continuity and disaster recovery plans at least annually, with tests covering AI system dependencies where applicable. Test results shall be documented and remediation actions tracked to completion.

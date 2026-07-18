@@ -1,0 +1,110 @@
+FINANCIAL CONDUCT AUTHORITY
+Policy Statement PS22/9
+A New Consumer Duty
+July 2022
+
+DOCUMENT METADATA
+Regulator: FCA
+Document Reference: PS22/9
+Effective Date: 31 July 2023 (existing products); 31 July 2024 (closed products)
+Applicable to: All FCA-authorised firms dealing with retail customers
+
+---
+
+SECTION 1: OVERVIEW OF THE CONSUMER DUTY
+
+1.1 Introduction
+
+The Financial Conduct Authority (FCA) has introduced a new Consumer Duty that sets higher and clearer standards of consumer protection across financial services. The Consumer Duty requires firms to act to deliver good outcomes for retail customers. It represents a fundamental shift in approach: moving from rule-based compliance to outcome-focused responsibility.
+
+1.2 The Consumer Principle
+
+The Consumer Duty introduces a new Consumer Principle: firms must act to deliver good outcomes for retail customers. This overarching principle is supported by the Cross-Cutting Rules and the Four Outcomes, which together constitute the Consumer Duty framework.
+
+1.3 Scope
+
+The Consumer Duty applies to all regulated activities and ancillary activities relating to retail customers, including digital channels, automated advice, and AI-driven customer interactions. Firms must apply the Duty across the full customer journey, from marketing and product design through to post-sale support and complaint handling.
+
+---
+
+SECTION 2: CROSS-CUTTING RULES
+
+2.1 Act in Good Faith
+
+Firms must act in good faith towards retail customers. Acting in good faith requires firms to be honest, fair, and transparent in their dealings with customers, and to avoid exploiting customers' behavioural biases or limited financial capability.
+
+2.2 Avoid Foreseeable Harm
+
+Firms must avoid causing foreseeable harm to retail customers. This includes harm arising from poor product design, misleading communications, inadequate support, and the use of AI systems that produce biased or inaccurate outcomes affecting customers.
+
+2.3 Enable and Support Good Outcomes
+
+Firms must enable and actively support retail customers to pursue their financial objectives. This requires firms to design products and services that genuinely meet customer needs, to communicate clearly and in plain language, and to provide appropriate support at key moments.
+
+---
+
+SECTION 3: THE FOUR OUTCOMES
+
+3.1 Products and Services Outcome
+
+Firms must ensure that their products and services are designed to meet the needs of their target market and avoid causing foreseeable harm. For AI-driven products, this includes:
+
+(a) Ensuring that AI systems used in product design or pricing do not systematically disadvantage vulnerable customers or protected groups;
+(b) Conducting regular reviews of AI model outputs to verify that products continue to meet the needs of the target market as conditions change;
+(c) Maintaining human oversight of AI systems in customer-facing contexts, particularly where AI outputs may affect access to products or pricing.
+
+3.2 Price and Value Outcome
+
+Firms must ensure that the price customers pay for products and services is reasonable relative to the overall benefits received. Where AI is used in pricing decisions, firms must:
+
+(a) Be able to explain to customers how AI-driven pricing decisions were reached, in terms accessible to a retail customer;
+(b) Monitor AI pricing models for unintended discrimination or adverse outcomes for particular customer segments;
+(c) Ensure that AI pricing systems do not exploit customers' behavioural vulnerabilities.
+
+3.3 Consumer Understanding Outcome
+
+Firms must ensure that their communications enable and support retail customers to make informed decisions. This requires:
+
+(a) All communications to be clear, fair, and not misleading, including those generated or personalised by AI systems;
+(b) The use of plain language appropriate to the customer's level of financial capability;
+(c) Providing timely, accurate, and complete information at the point of decision;
+(d) Ensuring that AI-generated communications are subject to appropriate human oversight and quality assurance.
+
+3.4 Consumer Support Outcome
+
+Firms must ensure that customers receive adequate support throughout their relationship with the firm. For AI-deployed support channels, firms must:
+
+(a) Ensure that AI systems can identify and appropriately escalate to human advisers when a customer is vulnerable, confused, or in financial difficulty;
+(b) Provide customers with a clear right to human assistance, where AI support is the primary channel;
+(c) Monitor AI support interactions for quality, accuracy, and customer satisfaction;
+(d) Maintain audit records of AI customer interactions sufficient to investigate complaints and demonstrate compliance.
+
+---
+
+SECTION 4: GOVERNANCE AND ACCOUNTABILITY
+
+4.1 Board Responsibility
+
+The FCA expects the Board to be responsible for embedding the Consumer Duty across the firm. This includes:
+
+(a) Approving the firm's Consumer Duty strategy and outcomes monitoring framework;
+(b) Receiving regular management information on customer outcomes, including outcomes arising from AI-driven processes;
+(c) Ensuring that remuneration and incentive structures support, rather than undermine, the Consumer Duty.
+
+4.2 Outcomes Monitoring
+
+Firms must implement robust outcomes monitoring to assess whether the Consumer Duty is being met in practice. Monitoring must include:
+
+(a) Quantitative metrics on customer outcomes, complaints, and product usage;
+(b) Qualitative assessments of customer experience, including mystery shopping and customer feedback;
+(c) Specific monitoring of AI-driven processes, including bias testing and accuracy assessments;
+(d) Regular reporting to the Board and senior management on outcomes monitoring results.
+
+4.3 Documentation and Record-Keeping
+
+Firms must be able to demonstrate to the FCA that they have complied with the Consumer Duty. This requires:
+
+(a) Documenting the firm's Consumer Duty strategy and implementation plan;
+(b) Maintaining records of outcomes monitoring activities and findings;
+(c) Retaining records of customer communications, including AI-generated communications, for the period required under the FCA's record-keeping rules;
+(d) Being able to provide the FCA with evidence of compliance within a reasonable timeframe on request.

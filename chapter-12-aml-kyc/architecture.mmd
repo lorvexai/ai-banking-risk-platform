@@ -1,0 +1,17 @@
+flowchart TD
+  T["chapter-12-aml-kyc Architecture"]
+  M1["aml_monitoring"]
+  T --> M1
+  M2["awb_commons"]
+  T --> M2
+  M3["awb_commons.models"]
+  T --> M3
+  M4["digital_identity"]
+  T --> M4
+  M5["kyc_credit"]
+  T --> M5
+  M1 --> M2
+  M4 --> M2
+  M5 --> M1
+  M5 --> M2
+  M5 --> M4
