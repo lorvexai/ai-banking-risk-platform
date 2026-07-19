@@ -120,12 +120,6 @@ regulatory or legal advice.*
 
 ### Architecture Diagrams
 
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
 ```mermaid
 flowchart TD
   T["chapter-14-mlops-llmops Architecture"]

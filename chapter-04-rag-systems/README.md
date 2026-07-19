@@ -209,12 +209,6 @@ Change model: set `MODEL_ID` environment variable in query_engine.py.
 
 ### Architecture Diagrams
 
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
 ```mermaid
 flowchart TD
   T["chapter-04-rag-systems Architecture"]

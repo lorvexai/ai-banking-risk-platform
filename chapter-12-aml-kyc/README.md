@@ -23,12 +23,6 @@ and Regulatory Reporting: The Enterprise Implementation Guide"**
 
 ### Architecture Diagrams
 
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
 ```mermaid
 flowchart TD
   T["chapter-12-aml-kyc Architecture"]

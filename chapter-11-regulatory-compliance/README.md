@@ -62,12 +62,6 @@ T24_API_URL=http://t24-mirror  # T24 data feed
 
 ### Architecture Diagrams
 
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
 ```mermaid
 flowchart TD
   T["chapter-11-regulatory-compliance Architecture"]

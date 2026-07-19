@@ -155,12 +155,6 @@ before looking.
 
 ### Architecture Diagrams
 
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
 ```mermaid
 flowchart TD
   T["Chapter_10_Code Architecture"]

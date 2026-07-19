@@ -153,12 +153,6 @@ AWB = Avon & Wessex Bank plc — entirely fictional.
 
 ### Architecture Diagrams
 
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
 ```mermaid
 flowchart TD
   T["chapter-16-integrated-platform Architecture"]

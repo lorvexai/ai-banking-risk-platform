@@ -118,12 +118,6 @@ seek qualified legal and regulatory counsel for your institution.
 
 ### Architecture Diagrams
 
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
 ```mermaid
 flowchart TD
   T["chapter-13-enterprise-architecture Architecture"]

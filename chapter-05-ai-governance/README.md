@@ -251,36 +251,6 @@ and fairness testing.
 *Models from approved June 2026 list only.
 Never use: GPT-4, Claude 3.5 Sonnet, Gemini 3 (deprecated).*
 
-### Architecture Diagrams
-
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
-```mermaid
-flowchart TD
-  T["chapter-05-ai-governance Architecture"]
-  M1["conftest"]
-  T --> M1
-  M2["model_governance"]
-  T --> M2
-  M3["model_governance.fairness_testing"]
-  T --> M3
-  M4["model_governance.incident_management"]
-  T --> M4
-  M5["model_governance.model_inventory"]
-  T --> M5
-  M6["model_governance.monitoring"]
-  T --> M6
-  M7["model_governance.validation_framework"]
-  T --> M7
-  M2 --> M3
-  M2 --> M6
-  M2 --> M7
-```
-
 ---
 
 ## Section 5.8A — SS1/23 Deployment Gate and Operational MRM

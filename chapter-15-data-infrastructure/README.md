@@ -82,12 +82,6 @@ Nothing here constitutes legal or regulatory advice.
 
 ### Architecture Diagrams
 
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
 ```mermaid
 flowchart TD
   T["chapter-15-data-infrastructure Architecture"]

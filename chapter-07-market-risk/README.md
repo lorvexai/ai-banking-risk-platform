@@ -220,38 +220,3 @@ Never use: GPT-4, Claude 3.5 Sonnet, Gemini 3 (deprecated).
 
 *AWB = Avon & Wessex Bank plc — entirely fictional.*  
 *GitHub: github.com/lorvenio/ai-banking-risk-platform*
-
-### Architecture Diagrams
-
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
-```mermaid
-flowchart TD
-  T["chapter-07-market-risk Architecture"]
-  M1["backtesting"]
-  T --> M1
-  M2["backtesting.backtest_engine"]
-  T --> M2
-  M3["cva"]
-  T --> M3
-  M4["cva.cva_calculator"]
-  T --> M4
-  M5["frtb"]
-  T --> M5
-  M6["frtb.frtb_capital"]
-  T --> M6
-  M7["var_engine"]
-  T --> M7
-  M8["var_engine.mc_var_engine"]
-  T --> M8
-  M9["var_monitoring"]
-  T --> M9
-  M10["var_monitoring.var_attribution_reporter"]
-  T --> M10
-```
-
-

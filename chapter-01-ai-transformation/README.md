@@ -197,34 +197,3 @@ Annual saving: 60% deflection x 50,000 calls/month x GBP 18/call - GBP 624 opex 
 
 *Models from approved June 2026 list only.
 Never use: GPT-4, Claude 3.5 Sonnet, Gemini 3 (deprecated).*
-
-### Architecture Diagrams
-
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
-```mermaid
-flowchart TD
-  T["chapter-01-ai-transformation Architecture"]
-  M1["chatbot"]
-  T --> M1
-  M2["chatbot.audit_log"]
-  T --> M2
-  M3["chatbot.classifier"]
-  T --> M3
-  M4["chatbot.compliance_filter"]
-  T --> M4
-  M5["chatbot.pipeline"]
-  T --> M5
-  M6["chatbot.response_generator"]
-  T --> M6
-  M4 --> M6
-  M5 --> M1
-  M5 --> M6
-  M6 --> M1
-```
-
-

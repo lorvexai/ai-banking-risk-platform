@@ -259,27 +259,3 @@ cd chapter-02-genai-llms
 pip install -r requirements.txt
 pytest tests/ -v
 ```
-
-### Architecture Diagrams
-
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
-```mermaid
-flowchart TD
-  T["chapter-02-genai-llms Architecture"]
-  M1["document_analyser"]
-  T --> M1
-  M2["document_analyser.audit_log"]
-  T --> M2
-  M3["document_analyser.extractor"]
-  T --> M3
-  M4["document_analyser.validator"]
-  T --> M4
-  M4 --> M1
-```
-
-

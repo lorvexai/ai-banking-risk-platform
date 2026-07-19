@@ -153,12 +153,6 @@ export AGENT_DRY_RUN=true
 
 ### Architecture Diagrams
 
-#### Excalidraw-Style (Hand-Drawn)
-
-![Architecture Diagram](architecture_handdrawn.svg)
-
-#### Mermaid
-
 ```mermaid
 flowchart TD
   T["chapter-08-operational-risk Architecture"]
