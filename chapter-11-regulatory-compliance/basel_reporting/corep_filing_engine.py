@@ -1,8 +1,8 @@
 """Basel Credit Risk COREP Filing Engine.
 
-Model ID: MR-2026-049 | Risk: MEDIUM
+Model ID: MR-2026-072 | Risk: MEDIUM
 Returns: C 02.00 (SA credit), C 08.00 (IRB credit)
-Source: MR-2026-040 (Ch 6 Corporate PD Model) via PDModelTool
+Source: MR-2026-043 (Ch 6 Corporate PD Model) via PDModelTool
 """
 from __future__ import annotations
 from dataclasses import dataclass
@@ -47,17 +47,17 @@ class SAExposureData:
 
 @dataclass
 class IRBExposureData:
-    """IRB approach portfolio data from MR-2026-040."""
+    """IRB approach portfolio data from MR-2026-043."""
     pd_band: str          # e.g., "<0.5%", "0.5-1%"
     ead_gbp: Decimal
     lgd: Decimal          # e.g., 0.45 for senior unsecured
-    rwa_gbp: Decimal      # From MR-2026-040 IRB formula
+    rwa_gbp: Decimal      # From MR-2026-043 IRB formula
 
 
 class COREPFilingEngine:
     """Generate C 02.00 and C 08.00 COREP returns.
 
-    Consumes MR-2026-040 (Chapter 6 Corporate PD Model)
+    Consumes MR-2026-043 (Chapter 6 Corporate PD Model)
     output for IRB approach, and T24 position data for SA.
 
     Args:
@@ -110,11 +110,11 @@ class COREPFilingEngine:
     ) -> XBRLInstance:
         """Generate COREP C 08.00 (IRB credit risk).
 
-        Source: MR-2026-040 IRB formula output from Chapter 6.
+        Source: MR-2026-043 IRB formula output from Chapter 6.
         PD × LGD × EAD × 1.06 × f(correlation, maturity).
 
         Args:
-            irb_exposures: IRB portfolio from Ch 6 MR-2026-040.
+            irb_exposures: IRB portfolio from Ch 6 MR-2026-043.
 
         Returns:
             XBRLInstance for C 08.00.
@@ -127,7 +127,7 @@ class COREPFilingEngine:
         }
         log.info(
             "C 08.00: IRB RWA=£%sB EAD=£%sB "
-            "source=MR-2026-040",
+            "source=MR-2026-043",
             round(float(total_irb_rwa)/1e9, 2),
             round(float(total_ead)/1e9, 2),
         )

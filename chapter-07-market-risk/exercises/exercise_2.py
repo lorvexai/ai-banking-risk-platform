@@ -6,7 +6,7 @@ via awb_commons PDModelTool
 Difficulty: ★★★★☆ | Estimated time: 45 minutes
 
 Task: Wire CVACalculator (MR-2026-048) to the Chapter 6
-Corporate PD Model (MR-2026-040) using the
+Corporate PD Model (MR-2026-043) using the
 awb_commons.PDModelTool interface.
 
 Steps:
@@ -44,9 +44,9 @@ from typing import Dict
 
 
 # ── AWB Barclays IRS Counterparty (stub data) ────────────────
-# This stub replaces the live MR-2026-040 PDModelTool call.
+# This stub replaces the live MR-2026-043 PDModelTool call.
 # In production: from awb_commons import PDModelTool
-# pd_tool = PDModelTool(model_id="MR-2026-040")
+# pd_tool = PDModelTool(model_id="MR-2026-043")
 # pd_ts = pd_tool.get_term_structure(
 #     counterparty_id="BARCLAYS_001",
 #     rating="BBB",
@@ -76,7 +76,7 @@ def get_pd_term_structure_from_mr_2026_040(
     rating: str = "BBB",
 ) -> Dict[float, float]:
     """
-    Stub for MR-2026-040 PDModelTool output.
+    Stub for MR-2026-043 PDModelTool output.
 
     In production this calls:
         awb_commons.PDModelTool.get_term_structure()
@@ -90,7 +90,7 @@ def get_pd_term_structure_from_mr_2026_040(
         Dict {time_years: cumulative_pd}
     """
     # AWB internal PD curve for BBB counterparty
-    # Source: MR-2026-040 (Chapter 6 Corporate PD Model)
+    # Source: MR-2026-043 (Chapter 6 Corporate PD Model)
     # Calibrated to UK corporate PD data, June 2026
     pd_curves = {
         "BBB": {
@@ -123,7 +123,7 @@ def calculate_barclays_cva(
     """
     Calculate CVA for Barclays IRS using MR-2026-048.
 
-    Step 1: Get PD term structure (from MR-2026-040 stub)
+    Step 1: Get PD term structure (from MR-2026-043 stub)
     Step 2: Calculate CVA using CVACalculator
     Step 3: Return CVAResult with SA-CVA capital
 

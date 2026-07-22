@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI for Financial Risk, Compliance and Regulatory Reporting — Sreedhara Reddy Kotha</title>
+<meta name="description" content="Companion code repository for 'AI for Financial Risk, Compliance and Regulatory Reporting: The Enterprise Implementation Guide' — 16 chapters, 27 production AI systems, 66,000+ lines of Python.">
+<style>
+  :root{
+    --navy:#0b1e33; --navy-2:#122c4a; --gold:#c9a961; --gold-dark:#a8863f;
+    --ink:#1b2430; --muted:#5b6673; --bg:#f7f8fa; --card:#ffffff; --line:#e4e7ec;
+    --high:#b3261e; --medium:#b06a00; --low:#1f7a4d;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Georgia',ui-serif,serif;background:var(--bg);color:var(--ink);line-height:1.55;}
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  header.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:56px 0;}
+  .hero-grid{display:grid;grid-template-columns:280px 1fr;gap:44px;align-items:start;}
+  .hero-cover{width:100%;border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.45);display:block;}
+  header.hero .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--gold);margin-bottom:14px;font-weight:600;}
+  header.hero h1{font-size:2.05rem;line-height:1.25;margin:0 0 14px;}
+  header.hero p.sub{font-family:ui-sans-serif,system-ui,sans-serif;color:#c9d4e0;font-size:1rem;margin:0 0 26px;}
+  .stat-row{display:flex;flex-wrap:wrap;gap:28px;margin:0 0 28px;font-family:ui-sans-serif,system-ui,sans-serif;}
+  .stat{min-width:110px;}
+  .stat .num{font-size:1.5rem;font-weight:700;color:var(--gold);}
+  .stat .label{font-size:.8rem;color:#a9b6c6;text-transform:uppercase;letter-spacing:.05em;}
+  @media(max-width:760px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-cover{max-width:220px;margin:0 auto;}
+  }
+
+  .btn-row{display:flex;flex-wrap:wrap;gap:14px;font-family:ui-sans-serif,system-ui,sans-serif;}
+  .btn-group{display:flex;flex-wrap:nowrap;gap:12px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:6px;font-weight:600;font-size:.92rem;text-decoration:none;border:1px solid transparent;transition:transform .12s ease;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn-gold{background:var(--gold);color:#1b1400;}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.4);}
+  .btn-outline:hover{border-color:#fff;}
+
+  section{padding:48px 0;}
+  section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  h2{font-size:1.5rem;margin:0 0 8px;}
+  p.lead{font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);max-width:760px;margin:0 0 28px;font-size:1rem;}
+
+  .risk{display:inline-block;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap;}
+  .risk.high{background:#fbe9e7;color:var(--high);}
+  .risk.medium{background:#fff3e0;color:var(--medium);}
+  .risk.low{background:#e6f4ea;color:var(--low);}
+  .risk.mixed{background:#eef1f5;color:var(--muted);}
+
+  .part-block{margin-bottom:38px;}
+  .part-block:last-child{margin-bottom:0;}
+  .part-header{margin-bottom:16px;}
+  .part-label{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--gold-dark);font-weight:700;}
+  .part-header h3{font-family:'Georgia',serif;font-size:1.3rem;color:var(--navy);margin:4px 0 8px;}
+  .part-desc{font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);font-size:.88rem;max-width:760px;margin:0;line-height:1.5;}
+
+  .chapter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:18px;font-family:ui-sans-serif,system-ui,sans-serif;}
+  .chapter-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;position:relative;border-left:4px solid var(--line);transition:box-shadow .15s ease,transform .15s ease;}
+  .chapter-card:hover{box-shadow:0 6px 20px rgba(11,30,51,.08);transform:translateY(-2px);}
+  .chapter-card.risk-high{border-left-color:var(--high);}
+  .chapter-card.risk-medium{border-left-color:var(--medium);}
+  .chapter-card.risk-low{border-left-color:var(--low);}
+  .chapter-card.risk-mixed{border-left-color:#9aa5b1;}
+  .cc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px;}
+  .cc-num-title{display:flex;align-items:baseline;gap:10px;}
+  .cc-num{font-family:'Georgia',serif;font-size:1.5rem;font-weight:700;color:var(--gold-dark);line-height:1;}
+  .cc-title{font-size:1.05rem;font-weight:700;color:var(--navy);}
+  .cc-summary{font-size:.9rem;color:#3d4652;line-height:1.55;margin-bottom:14px;margin-top:2px;}
+  .cc-links{display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);padding-top:12px;}
+  .cc-links a{font-size:.78rem;font-weight:600;color:var(--navy-2);text-decoration:none;background:#f0f3f7;padding:5px 10px;border-radius:5px;white-space:nowrap;}
+  .cc-links a:hover{background:var(--gold);color:#1b1400;}
+  .cc-links code{font-family:ui-monospace,monospace;}
+
+  .doc-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;font-family:ui-sans-serif,system-ui,sans-serif;}
+  .doc-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .doc-card a{font-weight:700;color:var(--navy-2);text-decoration:none;font-size:.98rem;}
+  .doc-card a:hover{color:var(--gold-dark);}
+  .doc-card p{margin:8px 0 0;font-size:.85rem;color:var(--muted);}
+
+  pre{background:var(--navy);color:#dce6f0;padding:16px 18px;border-radius:8px;font-size:.85rem;overflow-x:auto;font-family:ui-monospace,'SF Mono',monospace;}
+  .reg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;font-family:ui-sans-serif,system-ui,sans-serif;}
+  .reg-item{border-left:3px solid var(--gold);padding:6px 14px;font-size:.88rem;}
+  .reg-item b{display:block;color:var(--navy-2);font-size:.85rem;}
+  .reg-item span{color:var(--muted);}
+
+  footer{padding:36px 0 48px;text-align:center;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);font-size:.85rem;}
+  footer a{color:var(--navy-2);font-weight:600;text-decoration:none;}
+  .disclaimer{max-width:640px;margin:0 auto 14px;font-size:.8rem;color:#8a94a1;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <img class="hero-cover" src="assets/title_page.png" alt="AI for Financial Risk, Compliance and Regulatory Reporting — book cover">
+      <div>
+        <div class="kicker">Companion Repository</div>
+        <h1>AI for Financial Risk, Compliance and Regulatory Reporting</h1>
+        <p class="sub">Built around Avon &amp; Wessex Bank plc — a fictional £40B UK bank under PRA and FCA supervision — the book follows its complete AWB-AI-2026 programme from business case to production: agentic credit decisioning, RAG-grounded regulatory intelligence, and governance engineered to PRA SS1/23, the EU AI Act, and DORA from day one. Every system described ships as working, tested Python in this repository — not pseudocode. Every ROI figure follows the same six-step methodology — baseline cost, deflection rate, system cost, net saving, build cost, and three-year NPV at an 8% hurdle rate — and that discipline compounds, by the closing chapter, into a documented £12.1M in cumulative annual savings from a £3.2M initial investment. The book does not shy away from what goes wrong: a £12M near-miss in Chapter 4, where an ungrounded RAG query nearly returned a confidently wrong capital calculation, and an £840 overnight API bill in Chapter 3 that permanently changed how AWB designs agent cost controls, are treated with the same rigor as the successes. Governance is never an afterthought bolted on at the end — the PRA SS1/23 four-gate deployment framework, EU AI Act human-oversight checkpoints, and DORA's 70% LLM-concentration cap are load-bearing constraints from Chapter 1 onward, the same constraints every system in this repository is built and tested against.</p>
+
+        <div class="stat-row">
+          <div class="stat"><div class="num">16</div><div class="label">Chapters</div></div>
+          <div class="stat"><div class="num">27</div><div class="label">Production AI Systems</div></div>
+          <div class="stat"><div class="num">66K+</div><div class="label">Lines of Python</div></div>
+          <div class="stat"><div class="num">13</div><div class="label">Agentic Pipelines</div></div>
+        </div>
+
+        <div class="btn-row">
+          <div class="btn-group">
+            <a class="btn btn-gold" href="#kdp-link-tbd">Buy on Amazon (KDP) →</a>
+            <a class="btn btn-gold" href="#leanpub-link-tbd">Buy on Leanpub →</a>
+          </div>
+          <div class="btn-group">
+            <a class="btn btn-outline" href="#chapters">Browse chapter code ↓</a>
+            <a class="btn btn-outline" href="https://github.com/lorvexai/ai-banking-risk-platform">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="alt" id="chapters">
+  <div class="wrap">
+    <h2>Chapters &amp; code</h2>
+    <p class="lead">Each chapter maps to one or more production AI systems in the AWB model registry. Follow the folder link to browse everything for that chapter, or jump straight to the core agentic pipeline file.</p>
+
+    <div class="part-block">
+      <div class="part-header">
+        <div class="part-label">Part I — Chapters 1–5</div>
+        <h3>Foundations</h3>
+        <p class="part-desc">Every production AI system rests on three pillars: a compelling business case, a well-governed LLM layer, and a shared technical foundation. Part I builds all three for AWB, ending with four registered models and a reusable <code>awb_commons</code> library used in every chapter that follows.</p>
+      </div>
+    <div class="chapter-grid">
+
+      <div class="chapter-card risk-mixed">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">01</span><span class="cc-title">AI Transformation</span></div>
+          <span class="risk mixed">Foundations</span>
+        </div>
+        <p class="cc-summary">AWB faces three converging pressures — regulatory complexity, cost, and AI-native competitors — that make this the decisive moment for AI adoption in UK banking. This chapter lays the foundation: the £3.2M AWB-AI-2026 programme business case, the six-step ROI methodology used throughout the book, and the UK/EU regulatory map every later system is built against.</p>
+        <div class="cc-links">
+          <a href="../chapter-01-ai-transformation/">📁 Folder</a>
+          <a href="../chapter-01-ai-transformation/chatbot/pipeline.py"><code>pipeline.py</code></a>
+        </div>
+      </div>
+
+      <div class="chapter-card risk-medium">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">02</span><span class="cc-title">GenAI &amp; LLMs</span></div>
+          <span class="risk medium">MEDIUM</span>
+        </div>
+        <p class="cc-summary">Introduces the transformer architecture and prompt-engineering patterns behind every LLM in the book, then builds the Credit Document Analyser (MR-2026-035) — cutting financial data extraction from up to 90 minutes to 18 minutes per document at 97.3% accuracy, fully PRA SS1/23 and EU AI Act compliant.</p>
+        <div class="cc-links">
+          <a href="../chapter-02-genai-llms/">📁 Folder</a>
+          <a href="../chapter-02-genai-llms/document_analyser/extractor.py"><code>extractor.py</code></a>
+        </div>
+      </div>
+
+      <div class="chapter-card risk-high">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">03</span><span class="cc-title">AI Agents</span></div>
+          <span class="risk high">HIGH</span>
+        </div>
+        <p class="cc-summary">Extends the Document Analyser into a full agentic workflow — the Credit Decision Agent (MR-2026-037) — orchestrating four sub-agents into a Basel III IRB/CRR3-compliant credit recommendation. A parallel Treasury Operations Agent cuts the morning cash-positioning cycle from 6 hours to 25 minutes, for £2.1M/year combined saving.</p>
+        <div class="cc-links">
+          <a href="../chapter-03-ai-agents/">📁 Folder</a>
+          <a href="../chapter-03-ai-agents/credit_agent/agentic_ai_patterns.py"><code>agentic_ai_patterns.py</code></a>
+        </div>
+      </div>
+
+      <div class="chapter-card risk-low">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">04</span><span class="cc-title">RAG Systems</span></div>
+          <span class="risk low">LOW</span>
+        </div>
+        <p class="cc-summary">Builds the Regulatory Knowledge Assistant (MR-2026-038), grounding answers across 847 PRA, FCA, and EBA documents after a near-miss where an ungrounded query nearly caused a £12M capital miscalculation. Introduces the RAGAS evaluation harness and hybrid retrieval that make regulatory RAG auditable.</p>
+        <div class="cc-links">
+          <a href="../chapter-04-rag-systems/">📁 Folder</a>
+          <a href="../chapter-04-rag-systems/rag_assistant/agentic_rag.py"><code>agentic_rag.py</code></a>
+        </div>
+      </div>
+
+      <div class="chapter-card risk-low">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">05</span><span class="cc-title">AI Governance</span></div>
+          <span class="risk low">LOW</span>
+        </div>
+        <p class="cc-summary">Builds the AI Governance Platform that registers, validates, and monitors every model in the book under PRA SS1/23's three pillars — registration, independent validation, and ongoing monitoring. Cost £48.5K to build against the £2.8M s166 skilled-person review it protects AWB from.</p>
+        <div class="cc-links">
+          <a href="../chapter-05-ai-governance/">📁 Folder</a>
+          <a href="../chapter-05-ai-governance/model_governance/operational_mrm.py"><code>operational_mrm.py</code></a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div class="part-block">
+      <div class="part-header">
+        <div class="part-label">Part II — Chapters 6–10</div>
+        <h3>Risk Management Domains</h3>
+        <p class="part-desc">Part II applies the Part I foundations to the five core risk domains every UK bank must manage — credit, market, operational, liquidity, and model risk — each delivered as a production-grade system with a full ROI derivation.</p>
+      </div>
+    <div class="chapter-grid">
+
+      <div class="chapter-card risk-high">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">06</span><span class="cc-title">Credit Risk</span></div>
+          <span class="risk high">HIGH</span>
+        </div>
+        <p class="cc-summary">Replaces AWB's fragmented credit monitoring with the Credit Intelligence Monitor — five modules spanning covenant compliance, adverse news, PSI drift, IFRS 9 staging, and CFO narrative — on one Airflow DAG and one governance registration. Its credit API becomes the PD source for Chapter 7's CVA and the staging feed for Chapter 11's regulatory reporting.</p>
+        <div class="cc-links">
+          <a href="../chapter-06-credit-risk/">📁 Folder</a>
+          <a href="../chapter-06-credit-risk/agentic_cim.py"><code>agentic_cim.py</code></a>
+        </div>
+      </div>
+
+      <div class="chapter-card risk-high">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">07</span><span class="cc-title">Market Risk</span></div>
+          <span class="risk high">HIGH</span>
+        </div>
+        <p class="cc-summary">Applies the same platform discipline to the trading book — Monte Carlo VaR, expected shortfall, FRTB SA/IMA, and a CVA calculator consuming Chapter 6's PD term structure. Cut FRTB back-test exceptions from ~10/year to 3, avoiding a capital multiplier that would have raised SA-FRTB capital up to 4×.</p>
+        <div class="cc-links">
+          <a href="../chapter-07-market-risk/">📁 Folder</a>
+          <a href="../chapter-07-market-risk/agentic_market_risk.py"><code>agentic_market_risk.py</code></a>
+        </div>
+      </div>
+
+      <div class="chapter-card risk-medium">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">08</span><span class="cc-title">Operational Risk</span></div>
+          <span class="risk medium">MEDIUM</span>
+        </div>
+        <p class="cc-summary">Builds AWB's payment fraud detector, NLP loss-event classifier, and application fraud scorer inside the same governance frame. The fraud model scores 2.4M daily transactions at P99 54ms, targeting a reduction from £7.2M to under £1.5M/year in fraud losses.</p>
+        <div class="cc-links">
+          <a href="../chapter-08-operational-risk/">📁 Folder</a>
+          <a href="../chapter-08-operational-risk/agentic_op_risk.py"><code>agentic_op_risk.py</code></a>
+        </div>
+      </div>
+
+      <div class="chapter-card risk-high">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">09</span><span class="cc-title">Liquidity Risk</span></div>
+          <span class="risk high">HIGH</span>
+        </div>
+        <p class="cc-summary">Moves to the tightest time constraints in the book — a miscalculated intraday position can trigger a CHAPS settlement failure within hours. Builds real-time LCR/NSFR engines and an intraday monitor (BCBS 248) that fixed the architectural gap behind a March 2025 CLAR breach, for £2.75M net annual benefit.</p>
+        <div class="cc-links">
+          <a href="../chapter-09-liquidity-risk/">📁 Folder</a>
+          <a href="../chapter-09-liquidity-risk/agentic_liquidity_risk.py"><code>agentic_liquidity_risk.py</code></a>
+        </div>
+      </div>
+
+      <div class="chapter-card risk-high">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">10</span><span class="cc-title">Model Risk</span></div>
+          <span class="risk high">HIGH</span>
+        </div>
+        <p class="cc-summary">Builds the enterprise Model Risk Management platform — validation, monitoring, and governance for every AI/ML model built through Chapter 9 — answering not "can we build a better model" but "can we prove it can be trusted." Governs all registered systems under one Model Risk Committee.</p>
+        <div class="cc-links">
+          <a href="../chapter-10-model-risk/">📁 Folder</a>
+          <a href="../chapter-10-model-risk/agentic_model_risk.py"><code>agentic_model_risk.py</code></a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div class="part-block">
+      <div class="part-header">
+        <div class="part-label">Part III — Chapters 11–12</div>
+        <h3>Compliance and Regulatory</h3>
+        <p class="part-desc">Having mastered the five core risk domains, Part III turns to the regulatory and financial crime obligations that sit across every domain — where AI becomes a compliance accelerator, monitoring obligations in real time and generating the machine-readable evidence regulators increasingly require.</p>
+      </div>
+    <div class="chapter-grid">
+
+      <div class="chapter-card risk-mixed">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">11</span><span class="cc-title">Regulatory Compliance</span></div>
+          <span class="risk mixed">Mixed</span>
+        </div>
+        <p class="cc-summary">Automates what previously took 2.4 FTE per quarter — COREP capital returns, LCR/NSFR calculations, and the CRR3 Art.429 leverage ratio return — cutting the quarterly cycle from 340 analyst-hours to 45 (94% reduction). AWB's Q4 2025 leverage ratio of 4.2% clears the 3.0% Pillar 1 minimum by 120bps.</p>
+        <div class="cc-links">
+          <a href="../chapter-11-regulatory-compliance/">📁 Folder</a>
+          <a href="../chapter-11-regulatory-compliance/agentic_regulatory_compliance.py"><code>agentic_regulatory_compliance.py</code></a>
+        </div>
+      </div>
+
+      <div class="chapter-card risk-high">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">12</span><span class="cc-title">AML &amp; KYC</span></div>
+          <span class="risk high">HIGH</span>
+        </div>
+        <p class="cc-summary">Builds AWB's AML, KYC, and financial crime prevention platform — digital identity verification, ML transaction monitoring, and borrower KYC — under POCA 2002, FCA SYSC 6.3, and JMLSG guidance. Cut false-positive alerts 80% (8,400 to 1,680/month) while maintaining 340 SARs/year, saving £1.15M/year.</p>
+        <div class="cc-links">
+          <a href="../chapter-12-aml-kyc/">📁 Folder</a>
+          <a href="../chapter-12-aml-kyc/agentic_aml_kyc.py"><code>agentic_aml_kyc.py</code></a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div class="part-block">
+      <div class="part-header">
+        <div class="part-label">Part IV — Chapters 13–15</div>
+        <h3>Enterprise Implementation</h3>
+        <p class="part-desc">Building individual AI models is straightforward; running them reliably in a regulated bank is a different engineering challenge. Part IV covers the microservices architecture, MLOps/LLMOps pipeline, and BCBS 239-compliant data platform that make everything else sustainable.</p>
+      </div>
+    <div class="chapter-grid">
+
+      <div class="chapter-card risk-high">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">13</span><span class="cc-title">Enterprise Architecture</span></div>
+          <span class="risk high">HIGH</span>
+        </div>
+        <p class="cc-summary">Connects everything built in Parts I–III into one enterprise platform — microservices, multi-cloud DORA resilience, and Temenos T24 integration — after three independently designed systems that couldn't integrate cost AWB eleven weeks of unplanned rework and a DORA incident. The shared <code>awb_commons</code> library now underpins all 23 AI services.</p>
+        <div class="cc-links">
+          <a href="../chapter-13-enterprise-architecture/">📁 Folder</a>
+          <a href="../chapter-13-enterprise-architecture/agentic_enterprise_architecture.py"><code>agentic_enterprise_architecture.py</code></a>
+        </div>
+      </div>
+
+      <div class="chapter-card risk-low">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">14</span><span class="cc-title">MLOps &amp; LLMOps</span></div>
+          <span class="risk low">LOW</span>
+        </div>
+        <p class="cc-summary">Builds the operational discipline that keeps 23 AI models reliable in production — CI/CD retraining pipelines, prompt versioning, and drift monitoring — making it structurally impossible to deploy a model that hasn't passed the four-gate pipeline. If Chapter 13 is the motorway network, this is the traffic management system.</p>
+        <div class="cc-links">
+          <a href="../chapter-14-mlops-llmops/">📁 Folder</a>
+          <a href="../chapter-14-mlops-llmops/agentic_mlops_llmops.py"><code>agentic_mlops_llmops.py</code></a>
+        </div>
+      </div>
+
+      <div class="chapter-card risk-medium">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">15</span><span class="cc-title">Data Infrastructure</span></div>
+          <span class="risk medium">MEDIUM</span>
+        </div>
+        <p class="cc-summary">Builds the least visible, most load-bearing layer of the platform — a BCBS 239-aligned risk data warehouse, a point-in-time feature store, and GDPR-compliant governance feeding 20+ AI systems. Data quality is scored across 11 BCBS 239 principles at a 9.2/10 target.</p>
+        <div class="cc-links">
+          <a href="../chapter-15-data-infrastructure/">📁 Folder</a>
+          <a href="../chapter-15-data-infrastructure/agentic_data_infrastructure.py"><code>agentic_data_infrastructure.py</code></a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div class="part-block">
+      <div class="part-header">
+        <div class="part-label">Part V — Chapter 16</div>
+        <h3>Integration</h3>
+        <p class="part-desc">The capstone: taking fifteen chapters of individually validated AI systems and integrating them into one coherent, production-ready platform the CRO can rely on at 07:30 on a Monday morning.</p>
+      </div>
+    <div class="chapter-grid">
+
+      <div class="chapter-card risk-high">
+        <div class="cc-head">
+          <div class="cc-num-title"><span class="cc-num">16</span><span class="cc-title">Integrated Platform</span></div>
+          <span class="risk high">HIGH</span>
+        </div>
+        <p class="cc-summary">The capstone — unifies Customer 360, the risk data warehouse, the feature store, and all systems built across Chapters 1–15 into one CRO/CFO dashboard with real-time risk position and BCBS 239 compliance views, closing AWB's final data-distribution gap in a single orchestration layer.</p>
+        <div class="cc-links">
+          <a href="../chapter-16-integrated-platform/">📁 Folder</a>
+          <a href="../chapter-16-integrated-platform/agentic_integrated_platform.py"><code>agentic_integrated_platform.py</code></a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Companion documentation</h2>
+    <p class="lead">Reference material from the book's appendices, kept current between print editions.</p>
+    <div class="doc-cards">
+      <div class="doc-card">
+        <a href="appendices/glossary.html">Appendix A — Glossary</a>
+        <p>~100 AI/ML, regulatory, and AWB-specific terms, reproduced from the book's own glossary.</p>
+      </div>
+      <div class="doc-card">
+        <a href="appendices/regulatory-reference.html">Appendix B — Regulatory Reference</a>
+        <p>Article-level summaries: PRA SS1/23, EU AI Act, DORA, CRR3/Basel IV, POCA, FCA Consumer Duty.</p>
+      </div>
+      <div class="doc-card">
+        <a href="appendices/tech-stack.html">Appendix C — Tech Stack</a>
+        <p>Approved LLM models (Table 1.9), library versions, AWS services, and per-chapter cost estimates.</p>
+      </div>
+      <div class="doc-card">
+        <a href="appendices/model-registry.html">Appendix D — Model Registry Index</a>
+        <p>Every MR reference in the book, cross-referenced to its chapter — primary systems and agentic pipelines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Regulatory framework covered</h2>
+    <div class="reg-grid">
+      <div class="reg-item"><b>PRA SS1/23</b><span>4-gate deployment, 27-model registry</span></div>
+      <div class="reg-item"><b>EU AI Act</b><span>High-risk classification, Art.14 human oversight</span></div>
+      <div class="reg-item"><b>DORA Art.28</b><span>LLM concentration cap — no provider &gt; 70%</span></div>
+      <div class="reg-item"><b>DORA Art.11</b><span>RTO ≤ 120 min (P1), PRA notification ≤ 4 hrs</span></div>
+      <div class="reg-item"><b>CRR3 Art.72e</b><span>Output floor ≥ 55% (SS1/23 Gate 4)</span></div>
+      <div class="reg-item"><b>FCA PS22/9</b><span>Consumer Duty — fairness parity ±5pp</span></div>
+      <div class="reg-item"><b>BCBS 239</b><span>Data quality target ≥ 9.2/10</span></div>
+      <div class="reg-item"><b>FCA COBS 9</b><span>7-year audit log retention</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="disclaimer">Avon and Wessex Bank plc (AWB) is entirely fictional. Nothing in this repository or book constitutes regulatory or legal advice.</div>
+    <p>"AI for Financial Risk, Compliance and Regulatory Reporting: The Enterprise Implementation Guide" — Sreedhara Reddy Kotha<br>
+    <a href="https://github.com/lorvexai/ai-banking-risk-platform">GitHub repository</a> · MIT License</p>
+  </div>
+</footer>
+
+</body>
+</html>

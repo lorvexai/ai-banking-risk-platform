@@ -77,7 +77,7 @@ class CRR3RWACalculator:
 
         Args:
             facility_id: AWB facility reference.
-            pd:          Calibrated PD from MR-2026-040 (0–1).
+            pd:          Calibrated PD from MR-2026-043 (0–1).
             lgd:         Loss Given Default (0–1).
             ead:         Exposure at Default (£).
             maturity:    Remaining contractual maturity (years).
@@ -136,7 +136,10 @@ class CRR3RWACalculator:
         self,
         facilities: list[dict],
     ) -> list[RWAResult]:
-        """Score a portfolio batch for COREP C 07.00.
+        """Score a portfolio batch of facilities.
+
+        Feeds Chapter 11's Basel Credit Risk Reporting module
+        (MR-2026-072) for COREP C 02.00/C 08.00 filing.
 
         Args:
             facilities: List of dicts with keys:

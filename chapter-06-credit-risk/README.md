@@ -29,19 +29,21 @@ and Regulatory Reporting: The Enterprise Implementation Guide"**
 ### Overview
 
 This codebase implements the Chapter 6 credit risk intelligence stack across:
-corporate PD modeling (MR-2026-040), consumer loan origination (MR-2026-041),
-portfolio early-warning monitoring (MR-2026-042), and COREP C 07.00 reporting.
+corporate PD modeling (MR-2026-043), consumer loan origination (MR-2026-041), and
+the Credit Underwriting Assistant credit memo pipeline (MR-2026-068). COREP C
+02.00/C 08.00 reporting for these credit models is built in Chapter 11's Basel
+Credit Risk Reporting module (MR-2026-072, Section 11.3).
 
 | Model ID | System | SS1/23 Risk | EU AI Act |
 |----------|--------|-------------|-----------|
-| MR-2026-040 | AWB Corporate PD Model (XGBoost + SHAP) | HIGH | HIGH-RISK Annex III 5(b) |
+| MR-2026-043 | AWB Corporate PD Model (XGBoost + SHAP) | HIGH | HIGH-RISK Annex III 5(b) |
 | MR-2026-041 | Consumer Loan Origination (LightGBM) | MEDIUM | HIGH-RISK Annex III 5(b) |
-| MR-2026-042 | EWS LLM News Scanner (Gemini 3.5 Flash) | LOW | Limited |
 | MR-2026-055-AGT | Credit Intelligence Monitor — Agentic (Section 6.3A) | HIGH | HIGH-RISK Annex III 5(b) |
+| MR-2026-068 | Credit Underwriting Assistant (Section 6.8B) | HIGH | HIGH-RISK Annex III 5(b) |
 
-**Annual saving:** GBP 0.99M  
-**Payback period:** < 2 months  
-**Monthly running cost:** GBP 50 (GBP 11 LLM + GBP 39 infrastructure)
+**Monthly running cost:** GBP 27 (GBP 2 LLM + GBP 25 infrastructure)  
+Full CIM platform ROI (GBP 0.99M annual saving, <2 month payback) is derived in
+the book's Section 6.7.4 for the five-module CIM (MR-2026-055), not this file.
 
 ---
 
@@ -59,16 +61,10 @@ flowchart TD
 
   I["Corporate Facility Data"] --> J["Corporate PD Model - corporate_pd/model.py"]
   J --> K["CRR3 RWA Calculator - corporate_pd/rwa_calculator.py"]
-  K --> L["COREP C 07.00 - reporting/corep_c0700.py"]
-
-  M["Portfolio Snapshot"] --> N["EWS Rules + LLM Scan - portfolio/ews.py"]
-  M --> O["Concentration Monitor - portfolio/concentration.py"]
-  N --> P["Credit Analyst Review"]
-  O --> P
+  K --> L["Chapter 11 Basel Credit Risk Reporting - MR-2026-072"]
 
   D --> Q["Audit Log - awb_commons/audit.py"]
   J --> Q
-  N --> Q
 ```
 
 ---
@@ -82,7 +78,6 @@ flowchart LR
     C["Open Banking"] --> B
     D["Credit Bureau"] --> B
     E["Corporate Financials (T24)"] --> F["CreditFeatures"]
-    G["Market + Companies House"] --> H["FacilityData"]
   end
 
   B --> I["FeatureEngineer"]
@@ -94,15 +89,9 @@ flowchart LR
   F --> N["AWBCorporatePDModel"]
   N --> O["PDModelResult"]
   O --> P["CRR3RWACalculator"]
-  P --> Q["CorePC0700Generator"]
-
-  H --> R["EarlyWarningSystem"]
-  R --> S["RAG Status + Triggers"]
-  S --> T["Analyst Review"]
 
   J --> U["AuditLogger"]
   N --> U
-  R --> U
 ```
 
 ---
@@ -142,8 +131,9 @@ sequenceDiagram
 | FCA COBS 9 | 7-year audit retention in `awb_commons/audit.py` |
 | Consumer Credit Act 1974 | CRA disclosure in decline letters (`decline_letter.py`) |
 | PRA SS1/23 | Model risk ratings + audit evidence across all models |
+| EU AI Act Annex III 5(b) | Credit Underwriting Assistant explainable threshold assessment in `underwriting/credit_memo_generator.py` |
 | EU AI Act Annex III 5(b) | Consumer and corporate creditworthiness use cases |
-| DORA | ICT assets: CLO-2026-001, PD-2026-040, EWS-2026-001 |
+| DORA | ICT assets: CLO-2026-001, PD-2026-043 |
 
 ---
 
@@ -238,21 +228,22 @@ chapter-06-credit-risk/
 |   |-- fairness.py         # FCA PS22/9 fairness monitor
 |   |-- decline_letter.py   # Gemini 3.5 Flash decline letters
 |-- corporate_pd/
-|   |-- model.py            # XGBoost + Platt + SHAP (MR-2026-040)
+|   |-- model.py            # XGBoost + Platt + SHAP (MR-2026-043)
 |   |-- validator.py        # CRR3 Art. 176 validation suite
 |   |-- rwa_calculator.py   # CRR3 Art. 153 IRB RWA + output floor
-|-- portfolio/
-|   |-- ews.py              # 12-trigger EWS + LLM news scanner (MR-2026-042)
-|   |-- concentration.py    # HHI concentration monitor
-|-- reporting/
-|   |-- corep_c0700.py       # COREP C 07.00 generator
+|-- underwriting/
+|   |-- credit_memo_generator.py  # 3-stage credit memo pipeline (MR-2026-068)
 |-- tests/
 |   |-- test_consumer_loan.py
 |   |-- test_corporate_pd.py
-|   |-- test_portfolio.py
+|   |-- test_credit_memo_generator.py
 |-- requirements.txt
 |-- README.md
 ```
+
+COREP C 02.00/C 08.00 reporting for the corporate PD model's outputs is built in
+`chapter-11-regulatory-compliance/basel_reporting/` (MR-2026-072, Section 11.3),
+not in this chapter.
 
 ---
 
@@ -260,36 +251,38 @@ chapter-06-credit-risk/
 
 | Component | Monthly Cost |
 |-----------|-------------|
-| Gemini 3.5 Flash (decline letters + EWS news scans) | GBP 11 |
-| AWS ECS (daily EWS + monthly fairness + quarterly COREP) | GBP 22 |
+| Gemini 3.5 Flash (consumer loan decline letters) | GBP 2 |
+| AWS ECS (monthly fairness monitoring + PD validation) | GBP 8 |
 | PostgreSQL audit log (7-year retention) | GBP 8 |
-| S3 model artefacts + report storage | GBP 4 |
+| S3 model artefacts | GBP 4 |
 | Monitoring + logging | GBP 5 |
-| **Total** | **GBP 50/month** |
+| **Total** | **GBP 27/month** |
 
 Assumptions:
-- 12,400 corporate facilities monitored daily by EWS
-- 8% of facilities trigger LLM news scan (pre-score >= 1)
-- 20,000 consumer loan applications per month with 35% declines
-- 1,200 tokens per news scan, 900 tokens per decline letter
+- 20,000 consumer loan applications per month with 35% declines (7,000 letters)
+- 900 tokens per decline letter
 - Analyst fully-loaded cost: GBP 55/hour (GBP 70k salary, 40% overhead, 1,750 hours)
-- One-off implementation cost: GBP 120,000
-
-Annual saving: (12,400 facilities x 10 min/month x 12 months x 70% automation x GBP 55/hour) + (COREP automation 4 analysts x 5 days/quarter x 7.5 hours x 4 quarters x GBP 55/hour) - GBP 600 opex = **GBP 0.99M/year**
 
 Estimated monthly LLM cost calculation:
-(29,760 EWS scans x 1,200 tokens + 7,000 letters x 900 tokens) / 1,000 x GBP 0.00025
-= **GBP 11/month**
+7,000 letters x 900 tokens / 1,000 x GBP 0.00025 = **GBP 1.60/month**
 
-Payback period: GBP 120,000 / (GBP 0.99M / 12) = **~1.5 months**
+Note: the portfolio early-warning system (previously labelled MR-2026-042) and
+its COREP C 07.00 generator have been removed from this chapter — MR-2026-042
+was never a registered system in the book's Model Registry Index (Appendix),
+and the book's current narrative (Section 6.8C) is explicit that CIM has no
+single early-warning module; that signal is now split across the Adverse News
+Monitor and PSI Monitor (both under MR-2026-055) and Chapter 12's AML
+monitoring (MR-2026-060-AML). COREP reporting for the credit models here is
+built in Chapter 11 (MR-2026-072). The full CIM platform ROI (GBP 0.99M annual
+saving, <2 month payback) is derived independently in the book's Section 6.7.4
+and is not recomputed in this file.
 
 ---
 
 ### LLM Selection Rationale
 
-**Gemini 3.5 Flash** is used for decline letters and EWS news scanning because:
+**Gemini 3.5 Flash** is used for consumer loan decline letters because:
 - Lowest cost per token for high-volume, low-latency tasks
-- Reliable structured outputs (JSON) for news scan responses
 - Sufficient language quality for FCA PS22/9 consumer letters
 - Clear separation from decision logic (LLM is advisory only)
 

@@ -43,7 +43,7 @@ class LCRCalculation(BaseModel):
     compliant: bool
     scenario: StressScenario = StressScenario.BASE
     regulatory_reference: str = "CRR3 Art. 411-428"
-    mr_reference: str = "MR-2026-053"
+    mr_reference: str = "MR-2026-073"
 
     def is_above_buffer(self, buffer_pct: float = 110.0) -> bool:
         return self.lcr_pct >= buffer_pct

@@ -1,6 +1,6 @@
 """EBA XBRL/XML Filer — Taxonomy 4.0.
 
-Model ID: MR-2026-048 | EBA XBRL Taxonomy 4.0 (Q1 2025)
+Model ID: MR-2026-071 | EBA XBRL Taxonomy 4.0 (Q1 2025)
 Filing gateway: PRA Gabriel Data Collection System
 arelle: open-source XBRL validator (pip install arelle-release)
 """

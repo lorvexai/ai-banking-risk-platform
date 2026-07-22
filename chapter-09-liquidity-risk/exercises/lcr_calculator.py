@@ -5,7 +5,7 @@ Chapter 9: Liquidity Risk — AWB-AI-2025 Programme.
 Task: Build LCR from 28 EBA data elements.
 Target: LCR matches expected AWB June 2026 value of 138%.
 
-Model: MR-2026-053 | PRA SS1/23 Risk: LOW
+Model: MR-2026-073 | PRA SS1/23 Risk: LOW
 """
 from __future__ import annotations
 import sys

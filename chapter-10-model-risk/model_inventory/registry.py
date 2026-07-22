@@ -241,7 +241,7 @@ class ModelRegistry:
                 validated_at=datetime(2025, 3, 15),
             ),
             ModelRecord(
-                mr_reference="MR-2026-040",
+                mr_reference="MR-2026-049",
                 model_name="Payment Fraud Detector",
                 chapter=8,
                 ss1_23_risk=RiskRating.MEDIUM,
@@ -251,7 +251,7 @@ class ModelRegistry:
                 validated_at=datetime(2025, 2, 1),
             ),
             ModelRecord(
-                mr_reference="MR-2026-043",
+                mr_reference="MR-2026-052",
                 model_name="Cash Flow Forecaster",
                 chapter=9,
                 ss1_23_risk=RiskRating.MEDIUM,

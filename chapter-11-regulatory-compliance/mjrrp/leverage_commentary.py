@@ -1,6 +1,6 @@
 """LLM-assisted leverage ratio variance commentary.
 
-Model ID: MR-2026-048 | LLM: Gemini 3.5 Flash
+Model ID: MR-2026-071 | LLM: Gemini 3.5 Flash
 Trigger: leverage ratio moves >50bps quarter-on-quarter.
 Output: AI-ASSISTED DRAFT; CFO review mandatory before board.
 """
@@ -39,12 +39,12 @@ class LeverageRatioCommentaryGenerator:
     CFO review gate is mandatory — never auto-publish.
 
     Args:
-        model_id: Registered model ID (MR-2026-048).
+        model_id: Registered model ID (MR-2026-071).
     """
 
     def __init__(
         self,
-        model_id: str = "MR-2026-048",
+        model_id: str = "MR-2026-071",
     ) -> None:
         api_key = os.environ.get("GEMINI_API_KEY")
         if not api_key:

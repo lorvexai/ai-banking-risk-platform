@@ -1,13 +1,13 @@
 """AWB Corporate PD — CRR3 Art. 176 Validation Suite.
 
-Runs the full validation suite for MR-2026-040:
+Runs the full validation suite for MR-2026-043:
   - Discrimination: AUC-ROC, AUC-PR, Gini, K-S
   - Calibration: Brier score, Hosmer-Lemeshow
   - Stability: Population Stability Index (PSI)
   - CRR3: long-run PD deviation (Art. 180)
 
 Triggers mandatory recalibration if PSI > 0.20.
-Results written to MR-2026-040 SS1/23 model card.
+Results written to MR-2026-043 SS1/23 model card.
 """
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ log = logging.getLogger(__name__)
 
 
 class PDModelValidator:
-    """CRR3 Art. 176 full validation suite for MR-2026-040.
+    """CRR3 Art. 176 full validation suite for MR-2026-043.
 
     Usage::
 
@@ -101,7 +101,7 @@ class PDModelValidator:
         ])
 
         report = ValidationReport(
-            model_id    = "MR-2026-040",
+            model_id    = "MR-2026-043",
             validation_date = datetime.utcnow(),
             auc_roc     = round(auc_roc, 4),
             auc_pr      = round(auc_pr, 4),
@@ -124,17 +124,17 @@ class PDModelValidator:
 
         if report.recalibrate_required:
             log.warning(
-                "MR-2026-040 RECALIBRATION REQUIRED: PSI=%.3f > %.2f",
+                "MR-2026-043 RECALIBRATION REQUIRED: PSI=%.3f > %.2f",
                 psi, self.PSI_RECAL,
             )
         elif psi >= self.PSI_ALERT:
             log.warning(
-                "MR-2026-040 PSI ALERT: PSI=%.3f > %.2f",
+                "MR-2026-043 PSI ALERT: PSI=%.3f > %.2f",
                 psi, self.PSI_ALERT,
             )
 
         log.info(
-            "Validation MR-2026-040: auc=%.3f brier=%.3f "
+            "Validation MR-2026-043: auc=%.3f brier=%.3f "
             "psi=%.3f pass=%s",
             auc_roc, brier, psi, pass_all,
         )

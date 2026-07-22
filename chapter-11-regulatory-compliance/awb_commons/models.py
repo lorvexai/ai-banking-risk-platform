@@ -2,8 +2,8 @@
 
 Model IDs:
     MR-2026-047: HMRC Tax Reporting Engine (LOW risk)
-    MR-2026-048: MJRRP - Multi-Jurisdiction Platform (HIGH risk)
-    MR-2026-049: Basel Credit Risk Reporting (MEDIUM risk)
+    MR-2026-071: MJRRP - Multi-Jurisdiction Platform (HIGH risk)
+    MR-2026-072: Basel Credit Risk Reporting (MEDIUM risk)
 """
 from __future__ import annotations
 from dataclasses import dataclass, field
@@ -196,7 +196,7 @@ class COREPReturn:
     return_code: str          # e.g., "C 47.00"
     reporting_period: date
     xbrl_instance_xml: str
-    model_id: str = "MR-2026-048"
+    model_id: str = "MR-2026-071"
     filed_at: Optional[datetime] = None
     filing_reference: Optional[str] = None
     validation_passed: bool = False

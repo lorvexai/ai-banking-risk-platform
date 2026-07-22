@@ -1,9 +1,9 @@
 """AWB Corporate PD Model -- XGBoost + Platt + SHAP.
 
-Model ID:    MR-2026-040
+Model ID:    MR-2026-043
 Risk rating: HIGH (PRA SS1/23) -- board approval required
 EU AI Act:   HIGH-RISK Annex III s5b
-ICT Asset:   PD-2026-040
+ICT Asset:   PD-2026-043
 
 Architecture:
   CreditFeatures (14 inputs) ->
@@ -104,7 +104,7 @@ class OutputFloorResult:
 
 
 class AWBCorporatePDModel:
-    """MR-2026-040 -- Corporate PD Model.
+    """MR-2026-043 -- Corporate PD Model.
 
     XGBoost (max_depth=4) + Platt scaling + SHAP TreeExplainer.
     CRR3 Art. 174/176/180/465 compliant. EU AI Act HIGH-RISK Annex III s5b.
@@ -168,7 +168,7 @@ class AWBCorporatePDModel:
         base = float(shap_exp.base_values[0])
 
         log.info(
-            "MR-2026-040 fac=%s pd=%.4f ver=%s",
+            "MR-2026-043 fac=%s pd=%.4f ver=%s",
             facility_id, pd_cal, self.version,
         )
         return PDModelResult(

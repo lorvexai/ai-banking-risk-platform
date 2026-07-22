@@ -26,21 +26,13 @@ flowchart TD
   T --> M12
   M13["corporate_pd.validator"]
   T --> M13
-  M14["portfolio"]
-  T --> M14
-  M15["portfolio.concentration"]
-  T --> M15
-  M16["portfolio.ews"]
-  T --> M16
-  M17["reporting"]
-  T --> M17
-  M18["reporting.corep_c0700"]
-  T --> M18
+  M19["underwriting"]
+  T --> M19
+  M20["underwriting.credit_memo_generator"]
+  T --> M20
   M2 --> M3
   M2 --> M4
   M11 --> M4
   M12 --> M4
   M13 --> M4
-  M16 --> M3
-  M16 --> M4
-  M18 --> M4
+  M20 --> M3

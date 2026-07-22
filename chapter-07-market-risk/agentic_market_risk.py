@@ -485,7 +485,7 @@ class CVAWatchAgent:
               Generate Gemini alert narrative for treasury desk.
 
     Integrates with cva_calculator.py CVACalculator (MR-2026-048)
-    and Chapter 6 MR-2026-040 PD model via awb_commons CIMCreditClient.
+    and Chapter 6 MR-2026-043 PD model via awb_commons CIMCreditClient.
     POCA 2002: CVA spike from sanctioned counterparty → SAR consideration.
     """
 

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI for Financial Risk, Compliance and Regulatory Reporting — Sreedhara Reddy Kotha</title>
-<meta name="description" content="Production Systems and Architecture for Modern Banking. 16 chapters, 33 primary AI systems, 11 agentic governance pipelines, 66,000+ lines of Python — built around a fictional UK bank's AWB-AI-2026 programme, engineered to PRA SS1/23, the EU AI Act, and DORA from day one.">
+<meta name="description" content="Production Systems and Architecture for Modern Banking. 16 chapters, 31 primary AI systems, 11 agentic governance pipelines, 66,000+ lines of Python — built around a fictional UK bank's AWB-AI-2026 programme, engineered to PRA SS1/23, the EU AI Act, and DORA from day one.">
 <link rel="canonical" href="https://book.lorvexai.com/">
 <meta property="og:title" content="AI for Financial Risk, Compliance and Regulatory Reporting">
-<meta property="og:description" content="Production Systems and Architecture for Modern Banking — 16 chapters, 33 primary AI systems, 11 agentic pipelines, 66,000+ lines of production Python.">
+<meta property="og:description" content="Production Systems and Architecture for Modern Banking — 16 chapters, 31 primary AI systems, 11 agentic pipelines, 66,000+ lines of production Python.">
 <meta property="og:image" content="https://book.lorvexai.com/assets/title_page.png">
 <meta property="og:type" content="book">
 <meta name="twitter:card" content="summary_large_image">
@@ -267,11 +267,11 @@
       <div>
         <div class="kicker">Companion Repository</div>
         <h1>AI for Financial Risk, Compliance and Regulatory Reporting</h1>
-        <p class="sub">Built around Avon &amp; Wessex Bank plc—a fictional £40 billion UK bank supervised by the PRA and FCA—this book follows the complete AWB-AI-2026 transformation from business case to production operation. It shows how LLMs, AI agents, RAG and predictive models can be applied across credit, market, liquidity and operational risk, AML/KYC, regulatory reporting and model governance. Readers follow the development of 33 primary AI systems and 11 agentic governance pipelines, including agentic credit decisioning, regulatory intelligence, risk monitoring and an integrated CRO/CFO platform. Every system is supported by working, tested Python in the companion repository rather than simplified pseudocode or isolated demonstrations. Governance is engineered into each solution from the outset through PRA SS1/23 controls, EU AI Act human-oversight checkpoints, audit trails, validation gates and DORA resilience requirements. The book also provides a transparent six-step ROI methodology covering baseline cost, automation benefits, system cost, net savings, build investment and three-year NPV at an 8% hurdle rate. The fictional AWB programme demonstrates how a £3.2 million investment can deliver £12.1 million in documented annual savings across a governed enterprise AI platform. Realistic failure scenarios—including a £12 million RAG near-miss and an £840 runaway agent bill—show what can go wrong and the controls required to prevent recurrence. The result is a practical implementation and architecture guide for professionals who need to move beyond AI experimentation and operate trustworthy systems in regulated banking.</p>
+        <p class="sub">Built around Avon &amp; Wessex Bank plc (AWB)—a fictional £40 billion UK bank regulated by the PRA and FCA—this book follows the complete AWB-AI-2026 transformation from business case to production operation. It demonstrates how LLMs, AI agents, RAG and predictive models can be applied across credit, market, liquidity and operational risk, AML/KYC, regulatory reporting and model governance. Readers follow the development of 31 primary AI systems and 11 agentic governance and monitoring pipelines, including agentic credit decisioning, regulatory intelligence, risk monitoring and an integrated CRO/CFO platform. The companion repository provides working, tested Python reference implementations aligned with the systems described in the book, rather than isolated demonstrations or pseudocode. Governance is engineered into every solution from the outset through PRA SS1/23 controls, EU AI Act human-oversight checkpoints, auditable decision trails, validation gates and DORA-aligned operational resilience. The result is a practical implementation and architecture guide for professionals who need to move beyond AI experimentation and design, govern and operate trustworthy AI systems in regulated banking.</p>
 
         <div class="stat-row">
           <div class="stat"><div class="num">16</div><div class="label">Chapters</div></div>
-          <div class="stat"><div class="num">33</div><div class="label">Primary AI Systems</div></div>
+          <div class="stat"><div class="num">31</div><div class="label">Primary AI Systems</div></div>
           <div class="stat"><div class="num">11</div><div class="label">Agentic Pipelines</div></div>
           <div class="stat"><div class="num">66K+</div><div class="label">Lines of Python</div></div>
         </div>
@@ -295,13 +295,13 @@
   <div class="wrap">
     <div class="proof-strip">
       <div class="proof-item"><span class="num">16</span><span class="label">Chapters</span></div>
-      <div class="proof-item"><span class="num">33</span><span class="label">Primary AI systems</span></div>
+      <div class="proof-item"><span class="num">31</span><span class="label">Primary AI systems</span></div>
       <div class="proof-item"><span class="num">11</span><span class="label">Agentic pipelines</span></div>
       <div class="proof-item"><span class="num">66K+</span><span class="label">Lines of Python</span></div>
       <div class="proof-item"><span class="num">£12.1M</span><span class="label">Cumulative annual savings</span></div>
       <div class="proof-item"><span class="num">8</span><span class="label">Regulatory frameworks</span></div>
     </div>
-    <p class="proof-note">Figures reflect the book's full AI Model Registry Index (Appendix D): 33 primary systems plus 11 agentic governance pipelines built on top of them. Per-chapter and jacket-copy figures elsewhere in this repository may cite earlier subsets of this same registry.</p>
+    <p class="proof-note">Figures reflect the book's full AI Model Registry Index (Appendix D): 31 primary systems plus 11 agentic governance pipelines built on top of them. Per-chapter and jacket-copy figures elsewhere in this repository may cite earlier subsets of this same registry.</p>
   </div>
 </section>
 
@@ -317,7 +317,7 @@
       </div>
       <div class="why-card">
         <h3>Working code, not pseudocode</h3>
-        <p>Every system described — 33 primary AI/ML systems and 11 agentic oversight pipelines — ships as tested Python 3.11+ in this repository, each carrying its own AWB Model Registry (MR) reference.</p>
+        <p>Every system described — 31 primary AI/ML systems and 11 agentic oversight pipelines — ships as tested Python 3.11+ in this repository, each carrying its own AWB Model Registry (MR) reference.</p>
       </div>
       <div class="why-card">
         <h3>Failures included, deliberately</h3>
@@ -371,7 +371,7 @@
       </div>
       <div class="persona-panel" id="pp2">
         <h3>Software Developers &amp; ML Engineers</h3>
-        <p>Chapters 2–4 and 14 are the technical core: transformer fundamentals and document extraction, the LangGraph agentic pattern, RAG evaluation with RAGAS, and the CI/CD gates that keep 33 systems reliable in production.</p>
+        <p>Chapters 2–4 and 14 are the technical core: transformer fundamentals and document extraction, the LangGraph agentic pattern, RAG evaluation with RAGAS, and the CI/CD gates that keep 31 systems reliable in production.</p>
         <div class="persona-tags"><span>Ch. 2, 3, 4, 14</span><span>LangGraph</span><span>RAG</span><span>MLOps</span></div>
       </div>
       <div class="persona-panel" id="pp3">
@@ -473,7 +473,7 @@
           <details class="chapter-card">
             <summary><span class="cc-num-title"><span class="cc-num">06</span><span class="cc-title">Credit Risk</span></span><span class="risk high" title="Fictional AWB governance classification used for teaching purposes — not a regulatory rating.">SS1/23: HIGH</span></summary>
             <div class="cc-body">
-              <p class="cc-mr">MR-2026-041, 043–046, 055, 066–068, 070</p>
+              <p class="cc-mr">MR-2026-041, 043–045, 055, 066–068, 070</p>
               <p class="cc-summary">Replaces AWB's fragmented credit monitoring with the Credit Intelligence Monitor — five modules spanning covenant compliance, adverse news, PSI drift, IFRS 9 staging, and CFO narrative — on one Airflow DAG and one governance registration. Its credit API becomes the PD source for Chapter 7's CVA and the staging feed for Chapter 11's regulatory reporting.</p>
               <div class="cc-links"><a href="../chapter-06-credit-risk/">📁 Folder</a><a href="../chapter-06-credit-risk/agentic_cim.py"><code>agentic_cim.py</code></a></div>
             </div>
@@ -491,7 +491,7 @@
           <details class="chapter-card">
             <summary><span class="cc-num-title"><span class="cc-num">08</span><span class="cc-title">Operational Risk</span></span><span class="risk medium" title="Fictional AWB governance classification used for teaching purposes — not a regulatory rating.">SS1/23: MEDIUM</span></summary>
             <div class="cc-body">
-              <p class="cc-mr">MR-2026-041, 042, 043, 049–051</p>
+              <p class="cc-mr">MR-2026-049–051</p>
               <p class="cc-summary">Builds AWB's payment fraud detector, NLP loss-event classifier, and application fraud scorer inside the same governance frame. The fraud model scores 2.4M daily transactions at P99 54ms, targeting a reduction from £7.2M to under £1.5M/year in fraud losses.</p>
               <div class="cc-links"><a href="../chapter-08-operational-risk/">📁 Folder</a><a href="../chapter-08-operational-risk/agentic_op_risk.py"><code>agentic_op_risk.py</code></a></div>
             </div>
@@ -500,7 +500,7 @@
           <details class="chapter-card">
             <summary><span class="cc-num-title"><span class="cc-num">09</span><span class="cc-title">Liquidity Risk</span></span><span class="risk high" title="Fictional AWB governance classification used for teaching purposes — not a regulatory rating.">SS1/23: HIGH</span></summary>
             <div class="cc-body">
-              <p class="cc-mr">MR-2026-044, 045, 052, 054, 073</p>
+              <p class="cc-mr">MR-2026-052, 054, 073</p>
               <p class="cc-summary">Moves to the tightest time constraints in the book — a miscalculated intraday position can trigger a CHAPS settlement failure within hours. Builds real-time LCR/NSFR engines and an intraday monitor (BCBS 248) that fixed the architectural gap behind a March 2025 CLAR breach, for £2.75M net annual benefit.</p>
               <div class="cc-links"><a href="../chapter-09-liquidity-risk/">📁 Folder</a><a href="../chapter-09-liquidity-risk/agentic_liquidity_risk.py"><code>agentic_liquidity_risk.py</code></a></div>
             </div>
@@ -550,6 +550,7 @@
           <details class="chapter-card">
             <summary><span class="cc-num-title"><span class="cc-num">13</span><span class="cc-title">Enterprise Architecture</span></span><span class="risk high" title="Fictional AWB governance classification used for teaching purposes — not a regulatory rating.">SS1/23: HIGH</span></summary>
             <div class="cc-body">
+              <p class="cc-mr">MR-2026-061-EA</p>
               <p class="cc-summary">Connects everything built in Parts I–III into one enterprise platform — microservices, multi-cloud DORA resilience, and Temenos T24 integration — after three independently designed systems that couldn't integrate cost AWB eleven weeks of unplanned rework and a DORA incident. The shared <code>awb_commons</code> library now underpins every AI service in the registry.</p>
               <div class="cc-links"><a href="../chapter-13-enterprise-architecture/">📁 Folder</a><a href="../chapter-13-enterprise-architecture/agentic_enterprise_architecture.py"><code>agentic_enterprise_architecture.py</code></a></div>
             </div>
@@ -558,7 +559,7 @@
           <details class="chapter-card">
             <summary><span class="cc-num-title"><span class="cc-num">14</span><span class="cc-title">MLOps &amp; LLMOps</span></span><span class="risk low" title="Fictional AWB governance classification used for teaching purposes — not a regulatory rating.">SS1/23: LOW</span></summary>
             <div class="cc-body">
-              <p class="cc-mr">MR-2026-053, 058</p>
+              <p class="cc-mr">MR-2026-053</p>
               <p class="cc-summary">Builds the operational discipline that keeps every AI model reliable in production — CI/CD retraining pipelines, prompt versioning, and drift monitoring — making it structurally impossible to deploy a model that hasn't passed the four-gate pipeline. If Chapter 13 is the motorway network, this is the traffic management system.</p>
               <div class="cc-links"><a href="../chapter-14-mlops-llmops/">📁 Folder</a><a href="../chapter-14-mlops-llmops/agentic_mlops_llmops.py"><code>agentic_mlops_llmops.py</code></a></div>
             </div>
@@ -567,7 +568,7 @@
           <details class="chapter-card">
             <summary><span class="cc-num-title"><span class="cc-num">15</span><span class="cc-title">Data Infrastructure</span></span><span class="risk medium" title="Fictional AWB governance classification used for teaching purposes — not a regulatory rating.">SS1/23: MEDIUM</span></summary>
             <div class="cc-body">
-              <p class="cc-mr">MR-2026-054</p>
+              <p class="cc-mr">MR-2026-063-DI</p>
               <p class="cc-summary">Builds the least visible, most load-bearing layer of the platform — a BCBS 239-aligned risk data warehouse, a point-in-time feature store, and GDPR-compliant governance feeding 20+ AI systems. Data quality is scored across 11 BCBS 239 principles at a 9.2/10 target.</p>
               <div class="cc-links"><a href="../chapter-15-data-infrastructure/">📁 Folder</a><a href="../chapter-15-data-infrastructure/agentic_data_infrastructure.py"><code>agentic_data_infrastructure.py</code></a></div>
             </div>
@@ -633,14 +634,9 @@ flowchart TD
   E -->|DECLINE| H["Decline Letter Generator"]
   I["Corporate Facility Data"] --> J["Corporate PD Model"]
   J --> K["CRR3 RWA Calculator"]
-  K --> L["COREP C 07.00"]
-  M["Portfolio Snapshot"] --> N["EWS Rules + LLM Scan"]
-  M --> O["Concentration Monitor"]
-  N --> P["Credit Analyst Review"]
-  O --> P
+  K --> L["Chapter 11 Basel Credit Risk Reporting"]
   D --> Q["Audit Log"]
   J --> Q
-  N --> Q
           </div>
         </div>
         <a class="preview-toggle" href="https://github.com/lorvexai/ai-banking-risk-platform/blob/main/chapter-06-credit-risk/README.md">View full source on GitHub →</a>
@@ -733,7 +729,7 @@ flowchart TD
   <div class="wrap">
     <div class="final-cta">
       <h2>Stop experimenting. Start operating.</h2>
-      <p>Sixteen chapters, 33 primary AI systems, and 11 agentic governance pipelines — every one of them working, tested, and built to survive a real regulator's scrutiny.</p>
+      <p>Sixteen chapters, 31 primary AI systems, and 11 agentic governance pipelines — every one of them working, tested, and built to survive a real regulator's scrutiny.</p>
       <div class="btn-row">
         <div class="btn-group">
           <a class="btn btn-gold" href="#kdp-link-tbd">Buy on Amazon (KDP) →</a>

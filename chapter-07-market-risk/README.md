@@ -80,7 +80,7 @@ BacktestEngine (MR-2026-047)
         ├── BacktestResult (Sharpe, VaR, CVaR)
         └── MARComplianceChecker (wash trades, spoofing)
 
-Exposure Profile + PD Term Structure (MR-2026-040)
+Exposure Profile + PD Term Structure (MR-2026-043)
         │
         ▼
 CVACalculator (MR-2026-048)
@@ -162,7 +162,7 @@ chapter-07-market-risk/
 │   └── frtb_capital.py       # SA-FRTB: SbM + DRC + RRAO (CRR3)
 ├── exercises/
 │   ├── var_exercise.py       # Exercise 7.1: 5-asset MC VaR
-│   └── exercise_2.py         # Exercise 7.2: CVA + MR-2026-040 integration
+│   └── exercise_2.py         # Exercise 7.2: CVA + MR-2026-043 integration
 ├── tests/
 │   └── test_chapter_07.py    # 40+ pytest tests (all passing)
 ├── requirements.txt

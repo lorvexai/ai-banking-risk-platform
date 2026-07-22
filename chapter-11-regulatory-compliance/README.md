@@ -27,8 +27,9 @@ and Regulatory Reporting: The Enterprise Implementation Guide"**
 | Model ID | System | SS1/23 Risk |
 |----------|--------|-------------|
 | MR-2026-047 | HMRC Tax Reporting Engine | LOW |
-| MR-2026-048 | Multi-Jurisdiction Regulatory Reporting Platform | HIGH |
-| MR-2026-049 | Basel Credit Risk Reporting Module | MEDIUM |
+| MR-2026-071 | Multi-Jurisdiction Regulatory Reporting Platform | HIGH |
+| MR-2026-072 | Basel Credit Risk Reporting Module | MEDIUM |
+| MR-2026-069-REG | Regulatory Change Impact Analyzer | MEDIUM |
 
 ### Quick Start
 ```bash
@@ -36,7 +37,7 @@ git clone https://github.com/lorvenio/ai-banking-risk-platform
 cd chapter_11
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
-pytest tests/ -v          # 62 tests — all should pass
+pytest tests/ -v          # 71 tests — all should pass
 ```
 
 ### Environment Variables
@@ -47,10 +48,11 @@ T24_API_URL=http://t24-mirror  # T24 data feed
 
 ### Structure
 - hmrc_tax/     HMRC CGT + ISA + client letter generation (MR-2026-047)
-- mjrrp/        All 4 Basel pillars + XBRL filing (MR-2026-048)
+- mjrrp/        All 4 Basel pillars + XBRL filing (MR-2026-071)
 - stress_testing/ PRA CST + BoE CBES scenario loaders
-- basel_reporting/ COREP C02.00 + C08.00 filing engine (MR-2026-049)
-- tests/        62 pytest tests — no live API keys needed
+- basel_reporting/ COREP C02.00 + C08.00 filing engine (MR-2026-072)
+- change_impact/ Regulatory Change Impact Analyzer (MR-2026-069-REG)
+- tests/        71 pytest tests — no live API keys needed
 
 ### Key Regulations
 - CRR3 Art. 429 — Leverage ratio (4 components)
@@ -99,6 +101,10 @@ flowchart TD
   T --> M16
   M17["stress_testing.pra_cst_loader"]
   T --> M17
+  M18["change_impact"]
+  T --> M18
+  M19["change_impact.analyzer"]
+  T --> M19
   M4 --> M1
   M7 --> M1
   M9 --> M1

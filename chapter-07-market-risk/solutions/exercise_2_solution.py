@@ -1,7 +1,7 @@
 """Solution — Exercise 7.2: CVA via the CIM Credit API (awb_commons client).
 
 Retrieves a one-year PD for a stub counterparty from the CIM credit API
-(MR-2026-055 -> MR-2026-040), extends it with a Nelson-Siegel-style hazard
+(MR-2026-055 -> MR-2026-043), extends it with a Nelson-Siegel-style hazard
 curve, and computes unilateral CVA on a 3-year facility exposure profile.
 """
 from __future__ import annotations
@@ -15,7 +15,7 @@ class PDResponse:
     counterparty: str
     rating: str
     pd_1y: float
-    model_ref: str = "MR-2026-040"
+    model_ref: str = "MR-2026-043"
 
 
 class CIMCreditClient:

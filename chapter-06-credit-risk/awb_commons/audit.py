@@ -29,10 +29,10 @@ class AuditLogger:
 
     Schema (awb_model_audit):
       audit_id         UUID PK
-      model_id         VARCHAR(20)   MR-2026-040 etc.
+      model_id         VARCHAR(20)   MR-2026-043 etc.
       facility_id      VARCHAR(50)
       application_id   VARCHAR(50)   nullable
-      event_type       VARCHAR(50)   SCORE|DECISION|EWS
+      event_type       VARCHAR(50)   SCORE|DECISION
       input_snapshot   JSONB
       output_snapshot  JSONB
       model_version    VARCHAR(64)   SHA-256
@@ -89,24 +89,6 @@ class AuditLogger:
             "model_version":  model_version,
             "human_reviewer": human_reviewer,
             "logged_at":      datetime.utcnow().isoformat(),
-        })
-
-    def log_ews(
-        self,
-        facility_id: str,
-        status: str,
-        triggers: list[str],
-        score: float,
-    ) -> None:
-        """Log an EWS assessment (MR-2026-042)."""
-        self._write({
-            "model_id":        self.model_id,
-            "facility_id":     facility_id,
-            "event_type":      "EWS",
-            "input_snapshot":  {"triggers_fired": triggers},
-            "output_snapshot": {"status": status, "score": score},
-            "model_version":   "rules_v1.0",
-            "logged_at":       datetime.utcnow().isoformat(),
         })
 
     def get_records(

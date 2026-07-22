@@ -6,8 +6,8 @@ Namespace: awb_commons
 This module defines the data contracts between:
   - Chapter 2: Credit Document Analyser (MR-2026-035)
   - Chapter 3: Credit Decision Agent (MR-2026-037)
-  - Chapter 6: PD Model, Consumer Scoring, EWS
-  - Chapter 11: COREP C 07.00 reporting pipeline
+  - Chapter 6: PD Model (MR-2026-043), Consumer Scoring (MR-2026-041)
+  - Chapter 11: Basel Credit Risk Reporting, COREP C 02.00/C 08.00 (MR-2026-072)
 
 Any change to schemas here requires approval from
 the relevant model risk officers.
@@ -18,13 +18,6 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional
 from datetime import datetime
-
-
-class RAGStatus(str, Enum):
-    """EWS traffic-light status — MR-2026-042."""
-    RED   = "RED"
-    AMBER = "AMBER"
-    GREEN = "GREEN"
 
 
 class CreditDecision(str, Enum):
@@ -46,7 +39,7 @@ class CreditFeatures:
     """14 features consumed by AWB Corporate PD Model.
 
     Data contract between Chapter 2 (CDA, MR-2026-035)
-    and Chapter 6 (PD Model, MR-2026-040).
+    and Chapter 6 (PD Model, MR-2026-043).
     Version: 1.0.0 — June 2026
     """
     # Financial ratios (6 features)
@@ -71,7 +64,7 @@ class CreditFeatures:
 
 @dataclass
 class PDModelResult:
-    """Output of AWB Corporate PD Model (MR-2026-040).
+    """Output of AWB Corporate PD Model (MR-2026-043).
 
     Consumed by Chapter 3 RWAForecastAgent via PDModelTool,
     Chapter 11 COREP C 07.00 pipeline, Chapter 16 dashboard.
@@ -115,35 +108,12 @@ class ScoringResult:
 
 
 @dataclass
-class EWSResult:
-    """Output of a single-facility EWS run (MR-2026-042)."""
-    facility_id: str
-    status: RAGStatus
-    triggers_fired: list[str]
-    ews_score: float             # 0.0–10.0 composite
-    news_flag: Optional[str]     # "MATERIAL" | "NONE" | None
-    assessed_at: datetime = field(
-        default_factory=datetime.utcnow
-    )
-
-
-@dataclass
-class EWSStatusResult:
-    """Current EWS status for Chapter 3 EWSStatusTool."""
-    facility_id: str
-    status: RAGStatus
-    triggers_fired: list[str]
-    last_updated: datetime
-    news_flag: Optional[str]
-    pd_result: Optional[PDModelResult] = None
-
-
-@dataclass
 class RWAResult:
     """Output of CRR3RWACalculator.
 
-    Used by Chapter 3 RWAForecastAgent and
-    Chapter 11 COREP C 07.00 generator.
+    Used by Chapter 3 RWAForecastAgent and consumed by Chapter 11's
+    Basel Credit Risk Reporting module (MR-2026-072) for COREP C 02.00/
+    C 08.00 filing.
     """
     facility_id: str
     pd: float
@@ -164,7 +134,7 @@ class RWAResult:
 
 @dataclass
 class ValidationReport:
-    """Full CRR3 Art. 176 validation results for MR-2026-040."""
+    """Full CRR3 Art. 176 validation results for MR-2026-043."""
     model_id: str
     validation_date: datetime
     auc_roc: float

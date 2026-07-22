@@ -1,4 +1,4 @@
-"""Tests — AWB Corporate PD Model (MR-2026-040).
+"""Tests — AWB Corporate PD Model (MR-2026-043).
 
 Coverage:
   - Model stub: PD range, floor enforcement, SHAP values
@@ -22,14 +22,14 @@ import numpy as np
 from datetime import datetime
 
 import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../../../"))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from awb_commons.schemas import CreditFeatures, PDModelResult
-from chapter_06.corporate_pd.model import (
+from corporate_pd.model import (
     AWBCorporatePDModel, FEATURE_ORDER, PD_FLOOR_CRR3,
 )
-from chapter_06.corporate_pd.validator import PDModelValidator
-from chapter_06.corporate_pd.rwa_calculator import (
+from corporate_pd.validator import PDModelValidator
+from corporate_pd.rwa_calculator import (
     CRR3RWACalculator, LGD_FLOOR_UNSECURED,
 )
 
@@ -293,7 +293,7 @@ class TestPDModelValidator:
         ]
         y = np.array([i % 7 == 0 for i in range(n)]).astype(int)
         report = validator.validate(model, features, y)
-        assert report.model_id == "MR-2026-040"
+        assert report.model_id == "MR-2026-043"
         assert isinstance(report.auc_roc, float)
         assert isinstance(report.brier_score, float)
         assert isinstance(report.psi, float)

@@ -94,7 +94,7 @@ def exposure_profile():
 
 @pytest.fixture
 def pd_term_structure():
-    """PD term structure (from MR-2026-040 mock)."""
+    """PD term structure (from MR-2026-043 mock)."""
     return {
         0.25: 0.002, 0.5: 0.004, 1.0: 0.008,
         2.0:  0.016, 3.0: 0.024, 4.0: 0.032,
@@ -768,12 +768,12 @@ class TestCVACalculator:
 
 
 class TestCVAChapter6Integration:
-    """Tests for MR-2026-040 (Ch6) -> MR-2026-048 (Ch7)."""
+    """Tests for MR-2026-043 (Ch6) -> MR-2026-048 (Ch7)."""
 
     def test_pd_model_tool_integration_mock(
         self, cva_calculator, exposure_profile
     ):
-        """Mock PDModelTool from MR-2026-040 (Ch 6)."""
+        """Mock PDModelTool from MR-2026-043 (Ch 6)."""
         mock_pd_tool = MagicMock()
         mock_pd_tool.get_pd_term_structure.return_value = {
             0.25: 0.002, 0.5: 0.004, 1.0: 0.008,

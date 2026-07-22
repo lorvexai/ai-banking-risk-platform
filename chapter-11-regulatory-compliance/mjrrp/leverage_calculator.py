@@ -1,6 +1,6 @@
 """Leverage Ratio Calculator — CRR3 Article 429.
 
-Model ID: MR-2026-048 | Risk: HIGH | COREP return: C 47.00
+Model ID: MR-2026-071 | Risk: HIGH | COREP return: C 47.00
 Quarterly deadline: 12 business days after period end.
 Minimum: 3.0% general | 3.5% G-SIBs (AWB = 3.0% applies).
 """

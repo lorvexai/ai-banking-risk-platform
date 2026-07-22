@@ -120,7 +120,7 @@ sequenceDiagram
 |------------|----------------|
 | CRR3 Art. 411-428 (LCR) | `LCRCalculator` applies HQLA haircuts, Level 2 cap, and 75% inflow cap |
 | CRR3 Art. 428a-428au (NSFR) | `NSFRCalculator` ASF/RSF factors with 100% minimum |
-| PRA SS1/23 | Model IDs MR-2026-052 (forecast) and MR-2026-053 (LCR/NSFR + intraday) |
+| PRA SS1/23 | Model IDs MR-2026-052 (forecast) and MR-2026-073 (LCR/NSFR + intraday) |
 | BCBS 248 | Intraday monitoring and daily peak summary in `IntradayLiquidityMonitor` |
 | DORA | Intraday critical alert thresholds and escalation actions |
 
@@ -224,7 +224,7 @@ chapter-09-liquidity-risk/
 |-- cash_flow/
 |   |-- forecaster.py          # LSTM cash flow forecast (MR-2026-052)
 |-- lcr_nsfr/
-|   |-- calculator.py          # LCR + NSFR calculators (MR-2026-053)
+|   |-- calculator.py          # LCR + NSFR calculators (MR-2026-073)
 |-- intraday_liquidity/
 |   |-- monitor.py             # Intraday liquidity monitor (BCBS 248)
 |-- tests/

@@ -2,7 +2,7 @@
 chapter_07/cva/cva_calculator.py
 AWB CVA Calculator — Credit Valuation Adjustment
 Model: MR-2026-048 | MEDIUM Risk PRA SS1/23
-Primary Thread: integrates MR-2026-040 (Ch 6 PD model)
+Primary Thread: integrates MR-2026-043 (Ch 6 PD model)
 awb_commons
 """
 
@@ -53,7 +53,7 @@ class CVACalculator:
     CVA = (1-R) x sum[ EE(t_i) x PD(t_{i-1}, t_i)
                        x DF(t_i) ]
 
-    Integrates with Chapter 6 MR-2026-040 Corporate PD
+    Integrates with Chapter 6 MR-2026-043 Corporate PD
     Model via PDModelTool for counterparty PD inputs.
 
     Model: MR-2026-048 | MEDIUM risk PRA SS1/23
@@ -97,7 +97,7 @@ class CVACalculator:
         Args:
             exposure: EE profile from MC simulation
             pd_term_structure: {time_years: cumulative_pd}
-                from MR-2026-040 PDModelTool (Ch 6)
+                from MR-2026-043 PDModelTool (Ch 6)
         Returns:
             CVAResult with CVA, DVA, SA-CVA capital
         Raises:

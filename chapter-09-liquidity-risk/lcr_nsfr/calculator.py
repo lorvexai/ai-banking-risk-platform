@@ -1,6 +1,6 @@
 """
 lcr_nsfr/calculator.py — AWB LCR and NSFR Calculator.
-Model ID: MR-2026-053 | PRA SS1/23 Risk: LOW
+Model ID: MR-2026-073 | PRA SS1/23 Risk: LOW
 CRR3 Art. 411-428 (LCR) and Art. 428a-428au (NSFR).
 Avon & Wessex Bank plc (AWB) — AWB-AI-2025 programme.
 """

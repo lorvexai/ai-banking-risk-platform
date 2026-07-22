@@ -5,34 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Appendix D — AI Model Registry Index | AI for Financial Risk, Compliance and Regulatory Reporting</title>
 <meta name="description" content="Appendix D: Full index of AWB Model Registry (MR) references cross-referenced to chapters, including primary AI/ML systems and agentic governance pipelines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#0b1e33; --navy-2:#122c4a; --gold:#c9a961; --gold-dark:#a8863f;
+    --sans:'Inter',ui-sans-serif,system-ui,sans-serif;
+    --serif:'Source Serif 4',Georgia,serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
     --ink:#1b2430; --muted:#5b6673; --bg:#f7f8fa; --card:#ffffff; --line:#e4e7ec;
   }
   *{box-sizing:border-box;}
-  body{margin:0;font-family:'Georgia',ui-serif,serif;background:var(--bg);color:var(--ink);line-height:1.6;}
+  body{margin:0;font-family:var(--serif);background:var(--bg);color:var(--ink);line-height:1.6;}
   a{color:var(--navy-2);}
   .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
   header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:28px 0;}
   header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
-  .back{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.85rem;color:#c9d4e0;text-decoration:none;font-weight:600;}
+  .back{font-family:var(--sans);font-size:.85rem;color:#c9d4e0;text-decoration:none;font-weight:600;}
   .back:hover{color:var(--gold);}
   header h1{font-size:1.3rem;margin:0;font-weight:700;}
-  .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--gold);font-weight:700;margin-bottom:6px;}
+  .kicker{font-family:var(--sans);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--gold);font-weight:700;margin-bottom:6px;}
   main{padding:40px 0 60px;}
-  .lead{font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);font-size:.95rem;margin-bottom:32px;}
-  h2{font-family:'Georgia',serif;font-size:1.3rem;color:var(--navy);margin:0 0 6px;padding-top:8px;}
-  .table-note{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.85rem;color:var(--muted);margin:0 0 16px;}
+  .lead{font-family:var(--sans);color:var(--muted);font-size:.95rem;margin-bottom:32px;}
+  h2{font-family:var(--serif);font-size:1.3rem;color:var(--navy);margin:0 0 6px;padding-top:8px;}
+  .table-note{font-family:var(--sans);font-size:.85rem;color:var(--muted);margin:0 0 16px;}
   .tbl-wrap{overflow-x:auto;margin-bottom:40px;border:1px solid var(--line);border-radius:10px;}
-  table{width:100%;border-collapse:collapse;font-family:ui-sans-serif,system-ui,sans-serif;font-size:.85rem;background:var(--card);}
+  table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.85rem;background:var(--card);}
   thead th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:10px 14px;border-bottom:2px solid var(--line);white-space:nowrap;}
   tbody td{padding:9px 14px;border-bottom:1px solid var(--line);}
   tbody tr:last-child td{border-bottom:none;}
   tbody tr:hover{background:#fafbfc;}
-  td.mr{font-weight:700;color:var(--navy);white-space:nowrap;font-family:ui-monospace,monospace;font-size:.82rem;}
+  td.mr{font-weight:700;color:var(--navy);white-space:nowrap;font-family:var(--mono);font-size:.82rem;}
   td.ch{text-align:center;color:var(--gold-dark);font-weight:700;}
-  footer{padding:28px 0 48px;text-align:center;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);font-size:.82rem;}
+  footer{padding:28px 0 48px;text-align:center;font-family:var(--sans);color:var(--muted);font-size:.82rem;}
   footer a{font-weight:600;text-decoration:none;}
 </style>
 </head>
@@ -65,8 +71,6 @@
           <tr><td class="mr">MR-2026-039</td><td>AI Governance Platform</td><td class="ch">5</td></tr>
           <tr><td class="mr">MR-2026-041</td><td>LightGBM Retail Credit Scorer</td><td class="ch">6</td></tr>
           <tr><td class="mr">MR-2026-043</td><td>Credit PD Model</td><td class="ch">6</td></tr>
-          <tr><td class="mr">MR-2026-044</td><td>Credit LGD Model</td><td class="ch">6</td></tr>
-          <tr><td class="mr">MR-2026-045</td><td>Credit EAD Model</td><td class="ch">6</td></tr>
           <tr><td class="mr">MR-2026-046</td><td>Real-Time VaR Engine</td><td class="ch">7</td></tr>
           <tr><td class="mr">MR-2026-047</td><td>Algorithmic Trading Backtesting Platform</td><td class="ch">7</td></tr>
           <tr><td class="mr">MR-2026-048</td><td>CVA Calculator</td><td class="ch">7</td></tr>

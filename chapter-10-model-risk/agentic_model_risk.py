@@ -345,7 +345,7 @@ class ModelInventoryAgent:
     def _stub_result(self) -> dict:
         return {
             "total_models":       5,
-            "overdue_warn":       [{"mr_reference": "MR-2026-040",
+            "overdue_warn":       [{"mr_reference": "MR-2026-049",
                                     "model_name": "Payment Fraud Detector",
                                     "days_overdue": 45,
                                     "risk_rating": "MEDIUM"}],

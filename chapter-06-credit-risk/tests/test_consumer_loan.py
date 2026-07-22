@@ -20,19 +20,19 @@ import pandas as pd
 import numpy as np
 
 import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../../../"))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from chapter_06.consumer_loan.scorer import (
+from consumer_loan.scorer import (
     LightGBMCreditScorer, _StubScorer, THRESHOLD_APPROVE,
     THRESHOLD_DECLINE, FEATURE_NAMES,
 )
-from chapter_06.consumer_loan.fairness import (
+from consumer_loan.fairness import (
     FairnessMonitor, PARITY_THRESHOLD,
 )
-from chapter_06.consumer_loan.features import (
+from consumer_loan.features import (
     FeatureEngineer, RawApplication,
 )
-from chapter_06.consumer_loan.decline_letter import (
+from consumer_loan.decline_letter import (
     DeclineLetterGenerator, FEATURE_PLAIN,
 )
 
@@ -322,7 +322,7 @@ class TestFeatureEngineer:
         assert decile == 10
 
     def test_all_14_features_produced(self, engineer, raw_app):
-        from chapter_06.consumer_loan.scorer import FEATURE_NAMES
+        from consumer_loan.scorer import FEATURE_NAMES
         features = engineer.engineer(raw_app)
         for name in FEATURE_NAMES:
             assert name in features, f"Missing feature: {name}"

@@ -73,7 +73,7 @@ flowchart TD
 
 ---
 
-### Sequence Diagram
+### Sequence Diagram — Credit Decision Agent (Sequential ReAct Loop)
 
 ```mermaid
 sequenceDiagram
@@ -105,6 +105,38 @@ sequenceDiagram
 
   Agent->>Audit: get_audit_log()
   Audit-->>Officer: audit record (MR-2026-037)
+```
+
+---
+
+### Sequence Diagram — Treasury Operations Agent (Parallel Pipeline)
+
+Contrast with the sequential ReAct loop above: treasury operations are
+embarrassingly parallel, so `treasury_agent.py` fans out two independent
+agents and joins them before the report is drafted (Section 3.3).
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Dealer
+  participant Orchestrator as "run_treasury_pipeline()"
+  participant Cash as "CashPositionAgent"
+  participant FX as "FXExposureAgent"
+  participant Settlement as "SettlementRiskAgent"
+  participant Report as "TreasuryReportNode"
+
+  Dealer->>Orchestrator: 07:00 morning trigger
+  par Phase 1 - parallel fan-out (30s deadline each)
+    Orchestrator->>Cash: node_cash_position_agent() [Gemini 3.5 Flash]
+    Cash-->>Orchestrator: LCR %, nostro floor alerts
+  and
+    Orchestrator->>FX: node_fx_exposure_agent() [Gemini 3.5 Flash]
+    FX-->>Orchestrator: 1-day 99% VaR, counterparty exposure
+  end
+  Orchestrator->>Settlement: node_settlement_risk_agent() [Gemini 3.1 Pro, fan-in]
+  Settlement-->>Orchestrator: Herstatt exposure, liquidity adequacy
+  Orchestrator->>Report: node_treasury_report() [Gemini 3.5 Flash, streaming]
+  Report-->>Dealer: Morning briefing (Bloomberg + dashboard + Slack alerts)
 ```
 
 ---

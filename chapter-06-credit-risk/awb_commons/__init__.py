@@ -3,16 +3,16 @@
 Namespace: awb_commons
 """
 from awb_commons.schemas import (
-    PDModelResult, ScoringResult, EWSResult,
-    EWSStatusResult, RWAResult, ValidationReport,
-    CreditFeatures, RAGStatus, CreditDecision,
+    PDModelResult, ScoringResult,
+    RWAResult, ValidationReport,
+    CreditFeatures, CreditDecision,
     ModelRiskRating,
 )
 from awb_commons.audit import AuditLogger
 
 __all__ = [
-    "PDModelResult", "ScoringResult", "EWSResult",
-    "EWSStatusResult", "RWAResult", "ValidationReport",
-    "CreditFeatures", "RAGStatus", "CreditDecision",
+    "PDModelResult", "ScoringResult",
+    "RWAResult", "ValidationReport",
+    "CreditFeatures", "CreditDecision",
     "ModelRiskRating", "AuditLogger",
 ]
