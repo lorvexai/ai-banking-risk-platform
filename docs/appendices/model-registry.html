@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix D — AI Model Registry Index | AI for Financial Risk, Compliance and Regulatory Reporting</title>
+<meta name="description" content="Appendix D: Full index of AWB Model Registry (MR) references cross-referenced to chapters, including primary AI/ML systems and agentic governance pipelines.">
+<style>
+  :root{
+    --navy:#0b1e33; --navy-2:#122c4a; --gold:#c9a961; --gold-dark:#a8863f;
+    --ink:#1b2430; --muted:#5b6673; --bg:#f7f8fa; --card:#ffffff; --line:#e4e7ec;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Georgia',ui-serif,serif;background:var(--bg);color:var(--ink);line-height:1.6;}
+  a{color:var(--navy-2);}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:28px 0;}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  .back{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.85rem;color:#c9d4e0;text-decoration:none;font-weight:600;}
+  .back:hover{color:var(--gold);}
+  header h1{font-size:1.3rem;margin:0;font-weight:700;}
+  .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--gold);font-weight:700;margin-bottom:6px;}
+  main{padding:40px 0 60px;}
+  .lead{font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);font-size:.95rem;margin-bottom:32px;}
+  h2{font-family:'Georgia',serif;font-size:1.3rem;color:var(--navy);margin:0 0 6px;padding-top:8px;}
+  .table-note{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.85rem;color:var(--muted);margin:0 0 16px;}
+  .tbl-wrap{overflow-x:auto;margin-bottom:40px;border:1px solid var(--line);border-radius:10px;}
+  table{width:100%;border-collapse:collapse;font-family:ui-sans-serif,system-ui,sans-serif;font-size:.85rem;background:var(--card);}
+  thead th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:10px 14px;border-bottom:2px solid var(--line);white-space:nowrap;}
+  tbody td{padding:9px 14px;border-bottom:1px solid var(--line);}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:#fafbfc;}
+  td.mr{font-weight:700;color:var(--navy);white-space:nowrap;font-family:ui-monospace,monospace;font-size:.82rem;}
+  td.ch{text-align:center;color:var(--gold-dark);font-weight:700;}
+  footer{padding:28px 0 48px;text-align:center;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);font-size:.82rem;}
+  footer a{font-weight:600;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div>
+      <div class="kicker">Appendix D</div>
+      <h1>AI Model Registry Index</h1>
+    </div>
+    <a class="back" href="../index.html">← Back to companion repository</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="lead">Every AI/ML model reference (MR-ID) used across the book, cross-referenced to the chapter where it is built or primarily discussed. Use it to quickly locate a system by its registry number, or confirm which chapter owns a given ID.</p>
+
+    <h2 id="primary">Primary AI/ML Systems</h2>
+    <p class="table-note">Primary systems carry the base MR-2026-0NN identifier used in each system's model card, risk rating, and DORA ICT asset entries.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>MR Reference</th><th>System Name</th><th>Chapter</th></tr></thead>
+        <tbody>
+          <tr><td class="mr">MR-2026-035</td><td>AWB Credit Document Analyser</td><td class="ch">2</td></tr>
+          <tr><td class="mr">MR-2026-036</td><td>SME Financial Statement Analyser</td><td class="ch">2</td></tr>
+          <tr><td class="mr">MR-2026-037</td><td>AWB Credit Decision Agent</td><td class="ch">3</td></tr>
+          <tr><td class="mr">MR-2026-038</td><td>Regulatory Knowledge Assistant</td><td class="ch">4</td></tr>
+          <tr><td class="mr">MR-2026-039</td><td>AI Governance Platform</td><td class="ch">5</td></tr>
+          <tr><td class="mr">MR-2026-041</td><td>LightGBM Retail Credit Scorer</td><td class="ch">6</td></tr>
+          <tr><td class="mr">MR-2026-043</td><td>Credit PD Model</td><td class="ch">6</td></tr>
+          <tr><td class="mr">MR-2026-044</td><td>Credit LGD Model</td><td class="ch">6</td></tr>
+          <tr><td class="mr">MR-2026-045</td><td>Credit EAD Model</td><td class="ch">6</td></tr>
+          <tr><td class="mr">MR-2026-046</td><td>Real-Time VaR Engine</td><td class="ch">7</td></tr>
+          <tr><td class="mr">MR-2026-047</td><td>Algorithmic Trading Backtesting Platform</td><td class="ch">7</td></tr>
+          <tr><td class="mr">MR-2026-048</td><td>CVA Calculator</td><td class="ch">7</td></tr>
+          <tr><td class="mr">MR-2026-049</td><td>Payment Fraud Detector</td><td class="ch">8</td></tr>
+          <tr><td class="mr">MR-2026-050</td><td>Op Loss Event NLP</td><td class="ch">8</td></tr>
+          <tr><td class="mr">MR-2026-051</td><td>Credit Application Fraud Scorer</td><td class="ch">8</td></tr>
+          <tr><td class="mr">MR-2026-052</td><td>Cash Flow Forecaster</td><td class="ch">9</td></tr>
+          <tr><td class="mr">MR-2026-053</td><td>Customer Churn Prediction</td><td class="ch">14</td></tr>
+          <tr><td class="mr">MR-2026-054</td><td>Intraday Liquidity Monitor</td><td class="ch">9</td></tr>
+          <tr><td class="mr">MR-2026-055</td><td>Credit Intelligence Monitor (CIM) — parent</td><td class="ch">6</td></tr>
+          <tr><td class="mr">MR-2026-056</td><td>AWB Enterprise Model Registry</td><td class="ch">10</td></tr>
+          <tr><td class="mr">MR-2026-058</td><td>Prompt Registry</td><td class="ch">10</td></tr>
+          <tr><td class="mr">MR-2026-061</td><td>AML Transaction Monitoring System</td><td class="ch">12</td></tr>
+          <tr><td class="mr">MR-2026-062</td><td>Digital Identity Verification Platform</td><td class="ch">12</td></tr>
+          <tr><td class="mr">MR-2026-063</td><td>KYC Credit Borrower Screening</td><td class="ch">12</td></tr>
+          <tr><td class="mr">MR-2026-064</td><td>AML Typologies RAG</td><td class="ch">4 / 12</td></tr>
+          <tr><td class="mr">MR-2026-066</td><td>Covenant Compliance Analyser (CIM child)</td><td class="ch">6</td></tr>
+          <tr><td class="mr">MR-2026-067</td><td>Adverse News Monitor (CIM child)</td><td class="ch">6</td></tr>
+          <tr><td class="mr">MR-2026-068</td><td>Credit Underwriting Assistant (CIM child)</td><td class="ch">6</td></tr>
+          <tr><td class="mr">MR-2026-069-REG</td><td>Regulatory Change Impact Analyzer</td><td class="ch">11</td></tr>
+          <tr><td class="mr">MR-2026-070</td><td>Facility Rating Model</td><td class="ch">6</td></tr>
+          <tr><td class="mr">MR-2026-071</td><td>Multi-Jurisdiction Regulatory Reporting Platform (MJRRP)</td><td class="ch">11</td></tr>
+          <tr><td class="mr">MR-2026-072</td><td>Basel Credit Risk Reporting Module</td><td class="ch">11</td></tr>
+          <tr><td class="mr">MR-2026-073</td><td>LCR/NSFR Calculation Engine</td><td class="ch">9</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="agentic">Agentic Governance &amp; Monitoring Pipelines</h2>
+    <p class="table-note">The LangGraph-based oversight layers built on top of the primary systems above — one per chapter from Chapter 6 onward. Each carries a descriptive suffix rather than a standalone base number, since it monitors, rather than replaces, its parent system.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>MR Reference</th><th>Pipeline Name</th><th>Chapter</th></tr></thead>
+        <tbody>
+          <tr><td class="mr">MR-2026-055-AGT</td><td>Agentic CIM Extension</td><td class="ch">6</td></tr>
+          <tr><td class="mr">MR-2026-055-MKT</td><td>Agentic Market Risk Surveillance</td><td class="ch">7</td></tr>
+          <tr><td class="mr">MR-2026-056-OPS</td><td>Agentic Operational Risk Monitor</td><td class="ch">8</td></tr>
+          <tr><td class="mr">MR-2026-057-LIQ</td><td>Agentic Liquidity Risk Monitor</td><td class="ch">9</td></tr>
+          <tr><td class="mr">MR-2026-058-MRM</td><td>Agentic Model Risk Monitor</td><td class="ch">10</td></tr>
+          <tr><td class="mr">MR-2026-059-REG</td><td>Agentic Regulatory Compliance Monitor</td><td class="ch">11</td></tr>
+          <tr><td class="mr">MR-2026-060-AML</td><td>Agentic AML/KYC Investigation Pipeline</td><td class="ch">12</td></tr>
+          <tr><td class="mr">MR-2026-061-EA</td><td>Agentic Enterprise Architecture Assessment Pipeline</td><td class="ch">13</td></tr>
+          <tr><td class="mr">MR-2026-062-MLO</td><td>Agentic MLOps/LLMOps Pipeline</td><td class="ch">14</td></tr>
+          <tr><td class="mr">MR-2026-063-DI</td><td>Agentic Data Infrastructure Assessment Pipeline</td><td class="ch">15</td></tr>
+          <tr><td class="mr">MR-2026-074-IP</td><td>Agentic Platform Orchestrator</td><td class="ch">16</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../index.html">← Back to companion repository</a>
+  </div>
+</footer>
+
+</body>
+</html>

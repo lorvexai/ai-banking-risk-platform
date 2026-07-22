@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix B — UK/EU Regulatory Reference Guide | AI for Financial Risk, Compliance and Regulatory Reporting</title>
+<meta name="description" content="Appendix B: Article-level summaries of PRA SS1/23, EU AI Act, DORA, CRR3/Basel IV, POCA/JMLSG, FCA Consumer Duty, and BCBS 239 for AI in UK financial services.">
+<style>
+  :root{
+    --navy:#0b1e33; --navy-2:#122c4a; --gold:#c9a961; --gold-dark:#a8863f;
+    --ink:#1b2430; --muted:#5b6673; --bg:#f7f8fa; --card:#ffffff; --line:#e4e7ec;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Georgia',ui-serif,serif;background:var(--bg);color:var(--ink);line-height:1.6;}
+  a{color:var(--navy-2);}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:28px 0;}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  .back{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.85rem;color:#c9d4e0;text-decoration:none;font-weight:600;}
+  .back:hover{color:var(--gold);}
+  header h1{font-size:1.3rem;margin:0;font-weight:700;}
+  .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--gold);font-weight:700;margin-bottom:6px;}
+  main{padding:40px 0 60px;}
+  .lead{font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);font-size:.95rem;margin-bottom:16px;}
+  .disclaimer{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.82rem;color:#8a94a1;margin-bottom:32px;}
+  .toc{display:flex;flex-wrap:wrap;gap:8px;font-family:ui-sans-serif,system-ui,sans-serif;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line);}
+  .toc a{font-size:.78rem;font-weight:600;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;text-decoration:none;color:var(--navy-2);}
+  .toc a:hover{background:var(--gold);color:#1b1400;border-color:var(--gold);}
+  .reg-section{margin-bottom:40px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px 28px;}
+  .reg-section h2{font-family:'Georgia',serif;font-size:1.3rem;color:var(--navy);margin:0 0 10px;}
+  .reg-meta{display:flex;flex-wrap:wrap;gap:10px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:.78rem;margin-bottom:18px;}
+  .reg-meta span{background:#eef1f5;color:var(--muted);border-radius:999px;padding:4px 12px;}
+  .reg-meta span b{color:var(--navy-2);}
+  .article{border-left:3px solid var(--gold);padding:4px 0 4px 16px;margin-bottom:16px;}
+  .article:last-child{margin-bottom:0;}
+  .article .ref{font-weight:700;color:var(--navy);font-size:.95rem;display:block;margin-bottom:3px;}
+  .article p{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:.88rem;color:#3d4652;}
+  footer{padding:28px 0 48px;text-align:center;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);font-size:.82rem;}
+  footer a{font-weight:600;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div>
+      <div class="kicker">Appendix B</div>
+      <h1>UK/EU Regulatory Reference Guide</h1>
+    </div>
+    <a class="back" href="../index.html">← Back to companion repository</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="lead">Article-level reference summaries for the primary regulations governing AWB's AI systems. For each regulation, key articles relevant to AI/ML model deployment are listed with their practical AWB implications.</p>
+    <p class="disclaimer">For authoritative text, refer to the official FCA, PRA, EBA, and European Commission publications. Readers should verify current requirements with the relevant authority — regulatory requirements change frequently.</p>
+
+    <div class="toc">
+      <a href="#b1">B.1 PRA SS1/23</a>
+      <a href="#b2">B.2 EU AI Act</a>
+      <a href="#b3">B.3 DORA</a>
+      <a href="#b4">B.4 CRR3 / Basel IV</a>
+      <a href="#b5">B.5 POCA / JMLSG</a>
+      <a href="#b6">B.6 FCA Consumer Duty</a>
+      <a href="#b7">B.7 BCBS 239</a>
+    </div>
+
+    <section class="reg-section" id="b1">
+      <h2>B.1 — PRA SS1/23: Model Risk Management</h2>
+      <div class="reg-meta">
+        <span><b>Authority:</b> PRA</span>
+        <span><b>Effective:</b> May 2023</span>
+        <span><b>Scope:</b> All models used in decision-making at PRA-regulated firms, including AI/ML models</span>
+      </div>
+      <div class="article"><span class="ref">§3 — Model identification and classification</span><p>All models must be registered in a central inventory with risk rating (HIGH/MEDIUM/LOW) based on materiality and complexity. AWB uses a 4×4 Impact × Complexity matrix. Model IDs: MR-2026-035 through MR-2026-039 in Part I; additional IDs in Chs 6–16.</p></div>
+      <div class="article"><span class="ref">§4 — Model development</span><p>Development must follow documented methodology. Training data must be representative, complete, and subject to data quality checks. All assumptions must be documented. Code must be version-controlled.</p></div>
+      <div class="article"><span class="ref">§5 — Independent model validation</span><p>Validation must be conducted by a team independent of development. For HIGH-risk models, validation is mandatory before deployment. AWB's Model Risk team conducts validation; sign-off required before CI/CD pipeline proceeds to production.</p></div>
+      <div class="article"><span class="ref">§6 — Model use and ongoing monitoring</span><p>Models must be monitored against defined performance thresholds. AWB monitors AUC-ROC, PSI, and SHAP stability monthly. Drift above 3σ or PSI &gt;0.20 triggers recalibration.</p></div>
+      <div class="article"><span class="ref">§7 — Audit and documentation</span><p>7-year retention for all model documentation, validation reports, and decision audit trails. AWB stores in PostgreSQL (AWS RDS, eu-west-2).</p></div>
+    </section>
+
+    <section class="reg-section" id="b2">
+      <h2>B.2 — EU AI Act 2024: High-Risk AI Systems</h2>
+      <div class="reg-meta">
+        <span><b>Authority:</b> European Commission</span>
+        <span><b>Effective:</b> August 2024 (phased)</span>
+        <span><b>Scope:</b> AI systems used in the EU. Annex III §5b: credit scoring and AML detection are HIGH-RISK</span>
+      </div>
+      <div class="article"><span class="ref">Art. 10 — Data governance</span><p>Training, validation, and testing data must be relevant, representative, and free from errors. Bias testing required. AWB's Ch14 MLOps pipeline includes automated bias and drift checks at every training run.</p></div>
+      <div class="article"><span class="ref">Art. 14 — Human oversight</span><p>HIGH-RISK systems must enable human review and override. AWB implements mandatory human gates for credit decisions &gt;£500K exposure and agent confidence &lt;0.80. Non-blocking escalation to relationship manager queue.</p></div>
+      <div class="article"><span class="ref">Art. 17 — Quality management system</span><p>Providers of HIGH-RISK systems must establish a QMS covering design, testing, monitoring, and documentation. AWB's AI governance platform (MR-2026-039) serves as the QMS.</p></div>
+      <div class="article"><span class="ref">Art. 72 — Post-market monitoring</span><p>Continuous monitoring of HIGH-RISK systems in production. AWB samples 5% of live RAG queries for automated RAGAS evaluation; credit model performance reviewed monthly by Model Risk team.</p></div>
+    </section>
+
+    <section class="reg-section" id="b3">
+      <h2>B.3 — DORA: Digital Operational Resilience Act</h2>
+      <div class="reg-meta">
+        <span><b>Authority:</b> EBA / European Commission</span>
+        <span><b>Effective:</b> January 2025</span>
+        <span><b>Scope:</b> All EU/UK financial entities. ICT systems including AI/LLM deployments</span>
+      </div>
+      <div class="article"><span class="ref">Art. 17 — ICT incident classification</span><p>Autonomous agent security incidents (prompt injection, tool hijacking) must be classified as ICT-related incidents. AWB classifies and reports per the DORA incident taxonomy.</p></div>
+      <div class="article"><span class="ref">Art. 28 — ICT third-party concentration risk</span><p>No single ICT provider may exceed 70% of critical functions. AWB's multi-LLM strategy: Gemini 3.5 Flash 68% | Claude Sonnet 4.6 17% | GPT-5.5 15%. All providers below the 70% cap.</p></div>
+      <div class="article"><span class="ref">Art. 30 — Contractual arrangements</span><p>Contracts with ICT providers (Google, Anthropic, OpenAI) must include audit rights, data location clauses, and exit provisions.</p></div>
+    </section>
+
+    <section class="reg-section" id="b4">
+      <h2>B.4 — CRR3 / Basel IV: Capital Requirements</h2>
+      <div class="reg-meta">
+        <span><b>Authority:</b> EBA / PRA</span>
+        <span><b>Effective:</b> January 2025</span>
+        <span><b>Scope:</b> EU/UK banks. Credit risk, market risk, operational risk, and leverage ratio capital</span>
+      </div>
+      <div class="article"><span class="ref">Articles 112–191 — Credit risk RWA</span><p>Standardised and IRB approaches for credit risk. AWB uses IRB for its corporate credit portfolio. PD, LGD, EAD models require PRA approval and annual validation under SS1/23.</p></div>
+      <div class="article"><span class="ref">Article 153 — IRB RWA formula</span><p>RWA = f(PD, LGD, EAD, M) × 1.06 × correlation factor. AWB's RWAForecastAgent implements this formula for real-time capital estimation in the credit decision workflow.</p></div>
+      <div class="article"><span class="ref">Article 429 — Leverage ratio</span><p>Leverage ratio = Tier 1 Capital ÷ Total Leverage Exposure Measure. Minimum 3% (3.5% for G-SIBs). Quarterly COREP return C 47.00. AWB's reporting platform includes leverage ratio as the fourth pillar.</p></div>
+      <div class="article"><span class="ref">Articles 316–323 — Operational risk SMA</span><p>Standardised Measurement Approach for op risk capital. SMA Capital = BIC × ILM. AWB's AI-enhanced loss data feeds improve ILM accuracy through automated BCBS event categorisation.</p></div>
+    </section>
+
+    <section class="reg-section" id="b5">
+      <h2>B.5 — POCA 2002 / JMLSG: AML/KYC</h2>
+      <div class="reg-meta">
+        <span><b>Authority:</b> HM Government / JMLSG</span>
+        <span><b>Effective:</b> 2002 (ongoing amendments)</span>
+        <span><b>Scope:</b> All UK financial institutions</span>
+      </div>
+      <div class="article"><span class="ref">POCA s.330 — Failure to disclose</span><p>Offence for regulated persons who know or suspect money laundering and fail to disclose. AWB's AML system (MR-2026-061) triggers SAR drafting when ML alert confidence &gt;0.85.</p></div>
+      <div class="article"><span class="ref">POCA s.333A — Tipping-off prohibition</span><p>Offence to disclose that a SAR has been filed. AWB's credit gate prevents credit decisions on SAR-subject borrowers, enforced architecturally before T24 facility creation.</p></div>
+      <div class="article"><span class="ref">JMLSG Part I — CDD and EDD</span><p>Standard CDD for all borrowers. Enhanced Due Diligence for PEPs, high-risk jurisdictions, and complex ownership structures. AWB's KYC system (MR-2026-063) automates CDD via Companies House API and PSC Register tracing to four layers.</p></div>
+    </section>
+
+    <section class="reg-section" id="b6">
+      <h2>B.6 — FCA Consumer Duty: PS22/9</h2>
+      <div class="reg-meta">
+        <span><b>Authority:</b> FCA</span>
+        <span><b>Effective:</b> July 2023</span>
+        <span><b>Scope:</b> All FCA-regulated firms selling to retail customers</span>
+      </div>
+      <div class="article"><span class="ref">Four Outcome Areas</span><p>(1) Products and services: AI-generated product recommendations must match customer eligibility and risk profile. (2) Price and value: AI pricing must evidence fair value. (3) Consumer understanding: AI explanations must be clear and not misleading. (4) Consumer support: AI support channels must enable customers to act in their interests.</p></div>
+      <div class="article"><span class="ref">COBS 4 — Explanation requirements</span><p>Customers must receive clear explanations of AI-assisted decisions. AWB's credit memo generator and product suitability adviser include SHAP-based explanations in all customer-facing outputs.</p></div>
+    </section>
+
+    <section class="reg-section" id="b7">
+      <h2>B.7 — BCBS 239: Risk Data Aggregation</h2>
+      <div class="reg-meta">
+        <span><b>Authority:</b> BCBS</span>
+        <span><b>Effective:</b> January 2013 (G-SIBs); guidance for all significant banks</span>
+        <span><b>Scope:</b> Risk data governance, aggregation, and reporting</span>
+      </div>
+      <div class="article"><span class="ref">Principles 1–4 — Governance and infrastructure</span><p>Strong data governance, single authoritative source per risk type, automated data quality checks. AWB's data architecture (Ch15) implements a single Enterprise Risk Data Warehouse as the canonical source for all regulatory reporting.</p></div>
+      <div class="article"><span class="ref">Principles 5–9 — Risk data aggregation</span><p>Data must be accurate, complete, timely, and adaptable. AWB's nightly reconciliation against T24 balance sheet totals flags variances &gt;£1M before morning COREP runs.</p></div>
+      <div class="article"><span class="ref">Principles 10–14 — Risk reporting</span><p>Risk reports must be accurate, clear, complete, and distributed to appropriate levels. AWB's executive dashboard (Ch16) delivers real-time CRO/CFO-level risk views from the ERDW.</p></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../index.html">← Back to companion repository</a>
+  </div>
+</footer>
+
+</body>
+</html>

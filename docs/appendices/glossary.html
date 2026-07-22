@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix A — Glossary of Terms | AI for Financial Risk, Compliance and Regulatory Reporting</title>
+<meta name="description" content="Appendix A: Glossary of AI/ML, regulatory, and AWB-specific terms used across AI for Financial Risk, Compliance and Regulatory Reporting.">
+<style>
+  :root{
+    --navy:#0b1e33; --navy-2:#122c4a; --gold:#c9a961; --gold-dark:#a8863f;
+    --ink:#1b2430; --muted:#5b6673; --bg:#f7f8fa; --card:#ffffff; --line:#e4e7ec;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Georgia',ui-serif,serif;background:var(--bg);color:var(--ink);line-height:1.6;}
+  a{color:var(--navy-2);}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+  header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:28px 0;}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  .back{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.85rem;color:#c9d4e0;text-decoration:none;font-weight:600;}
+  .back:hover{color:var(--gold);}
+  header h1{font-size:1.3rem;margin:0;font-weight:700;}
+  .kicker{font-family:ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--gold);font-weight:700;margin-bottom:6px;}
+  main{padding:40px 0 60px;}
+  .lead{font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);font-size:.95rem;margin-bottom:28px;}
+  .alpha-nav{display:flex;flex-wrap:wrap;gap:6px;font-family:ui-sans-serif,system-ui,sans-serif;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);padding-top:12px;z-index:5;}
+  .alpha-nav a{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:5px;background:var(--card);border:1px solid var(--line);font-size:.8rem;font-weight:700;text-decoration:none;color:var(--navy-2);}
+  .alpha-nav a:hover{background:var(--gold);color:#1b1400;border-color:var(--gold);}
+  section.letter{margin-bottom:36px;}
+  section.letter h2{font-family:'Georgia',serif;font-size:1.6rem;color:var(--gold-dark);border-bottom:2px solid var(--line);padding-bottom:6px;margin-bottom:18px;}
+  dl{margin:0;}
+  dt{font-weight:700;color:var(--navy);font-size:1.02rem;margin-top:16px;}
+  dt:first-of-type{margin-top:0;}
+  dd{margin:4px 0 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:.9rem;color:#3d4652;}
+  footer{padding:28px 0 48px;text-align:center;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);font-size:.82rem;}
+  footer a{font-weight:600;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div>
+      <div class="kicker">Appendix A</div>
+      <h1>Glossary of Terms</h1>
+    </div>
+    <a class="back" href="../index.html">← Back to companion repository</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="lead">Terms used across the chapters of <em>AI for Financial Risk, Compliance and Regulatory Reporting</em>, reproduced from the book's own glossary — AI/ML concepts, UK/EU regulatory terms, and AWB-specific systems and controls, each tied back to how AWB actually used it.</p>
+
+    <div class="alpha-nav">
+      <a href="#A">A</a><a href="#B">B</a><a href="#C">C</a><a href="#D">D</a><a href="#E">E</a><a href="#F">F</a><a href="#G">G</a><a href="#H">H</a><a href="#I">I</a><a href="#K">K</a><a href="#L">L</a><a href="#M">M</a><a href="#N">N</a><a href="#O">O</a><a href="#P">P</a><a href="#R">R</a><a href="#S">S</a><a href="#T">T</a><a href="#V">V</a><a href="#W">W</a><a href="#X">X</a>
+    </div>
+
+    <section class="letter" id="A">
+      <h2>A</h2>
+      <dl>
+        <dt>Action Boundary</dt><dd>The governance line separating AI-system outputs requiring only human review (Recommend/Draft) from those permitted to execute autonomously — a line AWB's Agentic RAG engine never crosses.</dd>
+        <dt>Adverse News Monitor</dt><dd>AWB's two-stage AML/credit monitoring system (MR-2026-067) that screens news with Gemini 3.5 Flash and analyses qualifying items with Gemini 3.1 Pro, escalating POCA 2002 flags to compliance within one hour.</dd>
+        <dt>AgentChangeManagement</dt><dd>AWB's governance mechanism that classifies every agentic-system change by ChangeSurface (PROMPT, TOOL, BUDGET, MODEL_PROVIDER, or OTHER), with TOOL-surface changes always triggering security review.</dd>
+        <dt>Agentic AI</dt><dd>AI systems that take multi-step, tool-using actions toward a goal, exemplified at AWB by the Credit Decision Agent and Treasury Operations Agent operating under AutonomyLevel and OversightGate bounds.</dd>
+        <dt>Agentic RAG</dt><dd>A RAG variant in which an LLM-controlled ReAct loop decides which retrieval action to take next, up to six hops, before synthesising an answer (Section 4.9.3).</dd>
+        <dt>AgenticRAGResult</dt><dd>The structured output object returned by AWB's Agentic RAG engine, carrying the synthesised answer plus a hop log of typed Action objects that feeds the PRA SS1/23 model monitoring dashboard.</dd>
+        <dt>AI Act Risk Tiers</dt><dd>The EU AI Act's risk classification scheme, under which AWB's credit-scoring, AML, and lending systems fall into the HIGH-RISK tier (Annex III Section 5(b)), triggering conformity assessment obligations.</dd>
+        <dt>Airflow</dt><dd>Apache Airflow, the workflow orchestration platform AWB uses to schedule batch jobs such as the monthly ML model retraining DAG and the Credit Intelligence Monitor's five-module pipeline.</dd>
+        <dt>Algorithmic Accountability</dt><dd>The principle that organisations must explain and take responsibility for automated decisions, operationalised at AWB through model cards, audit trails, and SHAP explainability.</dd>
+        <dt>AML (Anti-Money Laundering)</dt><dd>AWB's AML controls, combining XGBoost transaction scoring with NetworkX Louvain community detection to cut false-positive alerts by 80% while maintaining the same SAR filing rate.</dd>
+        <dt>API Gateway</dt><dd>The secure ingress layer for external requests, exemplified by the Bank of England's BEEDS portal through which AWB submits all COREP XBRL returns to the PRA.</dd>
+        <dt>Audit Trail</dt><dd>The complete, retained record of an AI system's inputs, outputs, and decisions, kept by every AWB system for a minimum of 7 years to satisfy COBS 9.2 and FCA Consumer Duty obligations.</dd>
+        <dt>AutonomyLevel</dt><dd>AWB's five-point governance scale (L0_DRAFT_ONLY through L4_AUTONOMOUS) assigned to every agentic system, with any increase a board-reserved decision rather than an engineering change.</dd>
+        <dt>AWB (Avon &amp; Wessex Bank)</dt><dd>The fictional £40B-asset UK retail and commercial bank used throughout the book as the case-study institution deploying 23+ AI systems under PRA/FCA regulation.</dd>
+        <dt>AWB_CUSTOMER_ID</dt><dd>The universal primary key assigned to every AWB customer by the identity resolution pipeline, used as the cross-system join key across all registered AI systems.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="B">
+      <h2>B</h2>
+      <dl>
+        <dt>Backtesting</dt><dd>The practice of testing a model's historical predictions against realised outcomes, required as a clean 250-day record under the Internal Models Approach for PRA approval.</dd>
+        <dt>Basel IV</dt><dd>The industry name for the Basel Committee's post-2017 reforms, implemented in the EU/UK via CRR3 and covering the output floor, revised SA-CR, and FRTB.</dd>
+        <dt>BCBS 239</dt><dd>The Basel Committee's eleven principles for effective risk data aggregation and reporting, which AWB's Enterprise Risk Data Warehouse (ERDW) was built specifically to satisfy.</dd>
+        <dt>BM25</dt><dd>Best Match 25, a sparse keyword retrieval algorithm that complements dense vector search in AWB's hybrid pipeline via Reciprocal Rank Fusion with ChromaDB.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="C">
+      <h2>C</h2>
+      <dl>
+        <dt>Chain-of-Thought</dt><dd>A prompting technique inducing an LLM to articulate intermediate reasoning before its final answer, related to but distinct from the ReAct pattern's reasoning-action interleaving.</dd>
+        <dt>Champion/Challenger</dt><dd>A deployment pattern in which a production model (champion) and a retrained candidate (challenger) are evaluated side by side before the challenger replaces the champion, used throughout AWB's MLOps pipeline.</dd>
+        <dt>ChromaDB</dt><dd>The open-source vector database AWB uses for semantic similarity search in the Regulatory Knowledge Assistant, complemented by BM25 sparse retrieval via RRF fusion.</dd>
+        <dt>Chunking</dt><dd>AWB's document-aware chunking approach, which keeps a numbered obligation and its qualifying conditions in the same chunk (180–640 tokens) to improve context recall.</dd>
+        <dt>CI/CD (Continuous Integration / Continuous Deployment)</dt><dd>AWB's Credit Model CI/CD pipeline (Chapter 14) includes a Deployment Gate that blocks production releases lacking an active MR reference or approved prompt hash.</dd>
+        <dt>Circuit Breaker</dt><dd>AWB's fleet-level anomaly detector that automatically pauses any agent run whose cost exceeds three times the 30-day rolling average, triggering a PagerDuty P2 alert.</dd>
+        <dt>Community Detection</dt><dd>A graph analytics technique that identifies clusters of nodes transacting more with each other than chance predicts, used by AWB's Louvain-based AML monitoring to surface money mule networks.</dd>
+        <dt>Context Window</dt><dd>The maximum tokens an LLM can process per call, with AWB's Covenant Compliance Analyser using Gemini 3.1 Pro's 1-million-token window to fit an entire 40-page facility letter into one call.</dd>
+        <dt>Contextual Retrieval</dt><dd>A RAG technique that prepends a context summary to each retrieved chunk before indexing, used at AWB as a complement to, not a replacement for, document-aware chunking (Section 4.9.2).</dd>
+        <dt>Continuous Assurance</dt><dd>AWB's governance philosophy for agentic systems, which applies daily production sampling via the ContinuousAssuranceMonitor rather than periodic revalidation.</dd>
+        <dt>ContinuousAssuranceMonitor</dt><dd>AWB's control that re-scores a daily production sample of an agentic system's outputs against its ReliabilitySLO, with a sustained breach (two consecutive days) raising the same incident class as a drift breach.</dd>
+        <dt>Cosine Similarity</dt><dd>A distance metric measuring the angle between two embedding vectors, used by AWB's vector databases (ChromaDB and pgvector) to score semantic similarity.</dd>
+        <dt>Covenant</dt><dd>A contractual lending condition (e.g. a leverage or DSCR threshold) whose breach can trigger default, monitored across roughly 13,400 tests on AWB's 4,200 active facilities.</dd>
+        <dt>Covenant Compliance Analyser</dt><dd>AWB's RAG-based system (MR-2026-066) monitoring approximately 13,400 financial covenant tests across 4,200 corporate facilities using Gemini 3.1 Pro over a 23,000-document corpus indexed in pgvector.</dd>
+        <dt>CRR3</dt><dd>Capital Requirements Regulation 3, the EU/UK legislative vehicle implementing Basel IV reforms including the output floor, FRTB, and leverage ratio requirements.</dd>
+        <dt>Cypher</dt><dd>The query language for traversing Neo4j property graphs, used by AWB's GraphRAGEngine for bounded-depth traversals (maximum 3 hops) across its regulatory knowledge graph.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="D">
+      <h2>D</h2>
+      <dl>
+        <dt>DAML (Defence Against Money Laundering)</dt><dd>A consent SAR filed under POCA 2002 s.335, after which the National Crime Agency has seven working days to refuse consent before permission is deemed granted.</dd>
+        <dt>Deployment Gate</dt><dd>A required CI/CD control step that blocks a model or prompt from reaching production unless an active MR reference and approved prompt hash are present.</dd>
+        <dt>DORA (Digital Operational Resilience Act)</dt><dd>EU Regulation 2022/2554, in force January 2025, under which AWB targets RTO ≤ 4 hours and RPO ≤ 1 hour for AI/ML services (Article 11).</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="E">
+      <h2>E</h2>
+      <dl>
+        <dt>EAD (Exposure at Default)</dt><dd>One of the three core IRB credit risk parameters, representing the expected amount outstanding if a borrower defaults, used in AWB's CIM platform to calculate RWA.</dd>
+        <dt>Early Warning Indicator</dt><dd>A signal flagging emerging credit deterioration ahead of formal default, encompassing the 12 deterministic SICR indicators used in AWB's IFRS 9 Staging Engine.</dd>
+        <dt>ECL (Expected Credit Loss)</dt><dd>The IFRS 9 impairment measure calculated as 12-month ECL for Stage 1 accounts or lifetime ECL for Stage 2/3 accounts, displayed on AWB's CRO Dashboard alongside capital ratios and PSI scores.</dd>
+        <dt>ECS Task Definition / Kubernetes</dt><dd>AWB's enterprise architecture (Chapter 13) deliberately runs services as AWS ECS Task Definitions rather than Kubernetes, given AWB's operating scale and PRA SS1/23 requirements.</dd>
+        <dt>Embedding</dt><dd>A dense numeric vector representation of text capturing semantic meaning, generated by AWB's RAG pipelines (e.g. via Gemini text-embedding-004) for similarity-based retrieval.</dd>
+        <dt>Entity Resolution</dt><dd>AWB's identity resolution pipeline that uses deterministic matching for UK customers and Jaro-Winkler probabilistic matching for non-UK customers to create the AWB_CUSTOMER_ID.</dd>
+        <dt>EU AI Act</dt><dd>EU Regulation 2024/1689, under which AWB's credit-scoring, AML, and lending AI systems are classified HIGH-RISK (Annex III Section 5(b)), requiring conformity assessment and ongoing monitoring.</dd>
+        <dt>Explainability</dt><dd>A model's capability to provide human-interpretable reasons for its outputs, satisfied at AWB chiefly through SHAP feature attribution under PRA SS1/23 and FCA COBS 4.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="F">
+      <h2>F</h2>
+      <dl>
+        <dt>FastAPI</dt><dd>The Python web framework AWB uses to expose AI services as production APIs, including the Credit Intelligence Monitor's single FastAPI service serving three user personas.</dd>
+        <dt>Feature Store</dt><dd>A centralised ML feature repository giving point-in-time correct values for training (PostgreSQL) and sub-5ms values for live serving (Redis), eliminating training-serving skew at AWB.</dd>
+        <dt>Few-Shot Prompting</dt><dd>A prompting technique supplying an LLM with worked examples to steer output format, used across AWB's document-extraction systems to improve structured-output fidelity.</dd>
+        <dt>FRTB (Fundamental Review of the Trading Book)</dt><dd>The Basel Committee's 2016 market risk capital framework, implemented in the EU/UK via CRR3 from January 2025 with the SA-FRTB and IMA capital calculation methods (Chapter 7).</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="G">
+      <h2>G</h2>
+      <dl>
+        <dt>GDPR / UK GDPR</dt><dd>The data protection regime (UK GDPR and the Data Protection Act 2018) governing AWB's processing of personal data, addressed specifically in Chapter 15.</dd>
+        <dt>Gini Coefficient</dt><dd>A measure of credit model discriminatory power calculated as 2 × AUC-ROC minus 1, with AWB's framework setting a minimum threshold of 0.700 under PRA SS1/23.</dd>
+        <dt>Golden Trajectory (GoldenTrajectory)</dt><dd>A human-validated execution path recorded for each scenario in AWB's agent evaluation suite, versioned against a prompt_version so any prompt change forces re-validation.</dd>
+        <dt>GraphRAG</dt><dd>A hybrid retrieval architecture fusing dense vector search (pgvector) with bounded Neo4j graph traversal, used at AWB for cross-regulatory traceability that flat vector search cannot represent (Section 4.9.4).</dd>
+        <dt>GraphRAGResult</dt><dd>The structured output type returned by AWB's GraphRAGEngine, combining vector-retrieved passages with graph-traversal relationship context into a single context block before LLM synthesis.</dd>
+        <dt>Great Expectations</dt><dd>An open-source data quality validation framework with which AWB runs 24 validation rules on every scoring pipeline run, halting the Airflow DAG on any rule failure.</dd>
+        <dt>Grounding</dt><dd>A technique anchoring LLM outputs to source documents by requiring page-and-paragraph citation, one of AWB's three core hallucination mitigations.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="H">
+      <h2>H</h2>
+      <dl>
+        <dt>Hallucination</dt><dd>A factually incorrect or unsupported LLM output, mitigated at AWB to a benchmark target of less than 0.5% on extracted numerical values.</dd>
+        <dt>HITL (Human-in-the-Loop)</dt><dd>A control pattern requiring human review at a defined workflow point, implemented at AWB through LangGraph's native HITL checkpoints and OversightGate routing.</dd>
+        <dt>HNSW (Hierarchical Navigable Small World)</dt><dd>The approximate nearest-neighbour index algorithm used by ChromaDB, trading exact recall for sub-millisecond query latency in AWB's regulatory document retrieval.</dd>
+        <dt>HyDE (Hypothetical Document Embeddings)</dt><dd>A retrieval technique that embeds a hypothetical answer to use as the retrieval query, improving recall on abstract regulatory questions by 11% in AWB's Regulatory Knowledge Assistant.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="I">
+      <h2>I</h2>
+      <dl>
+        <dt>IFRS 9</dt><dd>The accounting standard requiring a three-stage expected credit loss impairment model, implemented at AWB through the IFRS 9 Staging Engine (Chapter 6).</dd>
+        <dt>IRB (Internal Ratings-Based)</dt><dd>The Basel approach letting a bank use internal models to estimate PD, LGD, and EAD for regulatory capital, subject to the CRR3 output floor.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="K">
+      <h2>K</h2>
+      <dl>
+        <dt>Kill-Switch (KillSwitchControl)</dt><dd>A first-class governed control for any AWB agentic system, requiring a named owner, a documented engage()/reset() procedure, and a place in the DORA Article 17 incident taxonomy.</dd>
+        <dt>Knowledge Graph</dt><dd>A structured representation of entities and relationships as nodes and edges, modelled at AWB in Neo4j across Regulation, Clause, Control, System, and Filing nodes to support GraphRAG.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="L">
+      <h2>L</h2>
+      <dl>
+        <dt>LangGraph</dt><dd>A Python library for stateful multi-agent workflows, used by AWB for the Credit Decision Agent because its conditional edges and parallel node execution handle routing that pure-Python ReAct cannot.</dd>
+        <dt>LCR (Liquidity Coverage Ratio)</dt><dd>The ratio of High Quality Liquid Assets to net 30-day stress outflows, with a minimum requirement of 100% under CRR3 Articles 411–428, reported monthly by AWB via the FSA047 return.</dd>
+        <dt>LGD (Loss Given Default)</dt><dd>One of the three core IRB credit risk parameters, representing the proportion of exposure lost after recoveries if a borrower defaults, feeding AWB's RWA and provisioning calculations.</dd>
+        <dt>LLM (Large Language Model)</dt><dd>A neural network trained to generate text continuations, used throughout AWB's AI systems with Gemini and Claude models selected per use case by context window, cost, and risk tier.</dd>
+        <dt>LLM-as-Judge (LLMJudge)</dt><dd>An evaluation pattern in which Claude Opus 4.8 scores AWB's Gemini agent outputs for faithfulness and completeness, deliberately using a different provider to avoid self-preference bias.</dd>
+        <dt>Louvain</dt><dd>A community detection algorithm maximising graph modularity, used by AWB's NetworkX-based AML monitoring to identify the clustering signature of a money mule network.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="M">
+      <h2>M</h2>
+      <dl>
+        <dt>Microservices</dt><dd>AWB's enterprise AI architecture (Chapter 13), built as independently deployable services on AWS ECS with multi-cloud disaster recovery on Azure and direct Temenos T24 integration.</dd>
+        <dt>MLflow</dt><dd>The open-source platform AWB uses as its authoritative deployment mechanism for experiment tracking, model registry, and reproducibility across the MLOps pipeline (Chapter 14).</dd>
+        <dt>MLOps</dt><dd>The discipline of operationalising ML models in production, with AWB's stack (Chapter 14) combining MLflow, Airflow, DVC, and Great Expectations under PRA SS1/23 requirements.</dd>
+        <dt>Model Card</dt><dd>A structured documentation artefact stored in AWB's model_cards table, serving as the primary evidence artefact for PRA SS1/23 compliance and EU AI Act technical documentation.</dd>
+        <dt>Model Governance</dt><dd>The framework of policies and controls governing AI/ML models at AWB, centred on the Model Risk Committee and the Impact × Complexity risk-tiering matrix under PRA SS1/23.</dd>
+        <dt>Model Risk Committee (MRC)</dt><dd>AWB's senior AI model governance body, chaired by the Chief Risk Officer, meeting monthly to approve model registrations and escalate material model incidents.</dd>
+        <dt>Model Risk Management (MRM)</dt><dd>The end-to-end discipline of identifying, assessing, and monitoring model risk, governed at AWB under PRA SS1/23 and benchmarked against the US SR 26-2 standard (Chapter 10).</dd>
+        <dt>Model Validation</dt><dd>The independent process of assessing whether a model performs within acceptable risk tolerances, performed at AWB by a function separate from model development per three-lines-of-defence principles.</dd>
+        <dt>MR Reference (Model Registry Reference)</dt><dd>AWB's unique identifier (e.g. MR-2026-035) assigned to every registered AI/ML model, with a Deployment Gate blocking production releases lacking an active reference. See the <a href="model-registry.html">full Model Registry Index (Appendix D)</a>.</dd>
+        <dt>Multi-Agent</dt><dd>An architecture in which multiple specialised agents collaborate on a workflow, exemplified by AWB's Credit Decision Agent integrating Chapter 2 and Chapter 4 outputs with RWA forecasting.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="N">
+      <h2>N</h2>
+      <dl>
+        <dt>Neo4j</dt><dd>The property-graph database AWB uses to store its regulatory knowledge graph and support bounded Cypher traversal queries in the GraphRAG pipeline (Chapter 4).</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="O">
+      <h2>O</h2>
+      <dl>
+        <dt>Orchestrator</dt><dd>The component sequencing steps within a workflow, with LangGraph orchestrating multi-agent credit decisioning at AWB while Airflow orchestrates batch ML and data pipelines.</dd>
+        <dt>Output Floor</dt><dd>The CRR3 requirement that IRB-derived RWA cannot fall below a percentage of the Standardised Approach equivalent, phasing from 50% in January 2025 to 72.5% by January 2030.</dd>
+        <dt>OversightGate</dt><dd>AWB's control routing each proposed agent Decision to a human or automatic execution, with the default policy gating any decision above £5,000,000 or below an 0.80 confidence floor.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="P">
+      <h2>P</h2>
+      <dl>
+        <dt>PD (Probability of Default)</dt><dd>One of the three core IRB credit risk parameters, representing the estimated likelihood a borrower defaults within a defined horizon, calibrated at AWB via Platt scaling and monitored for drift using PSI.</dd>
+        <dt>pgvector</dt><dd>The PostgreSQL extension AWB selected over a standalone vector database to keep the full audit trail within the existing PostgreSQL governance boundary.</dd>
+        <dt>Platt Scaling</dt><dd>A logistic regression technique converting raw model scores into calibrated probability-of-default estimates, used in AWB's credit risk model pipeline.</dd>
+        <dt>POCA 2002 (Proceeds of Crime Act)</dt><dd>UK primary legislation defining money laundering offences (ss.327–329) and the disclosure obligation (s.330), reflected in AWB's Adverse News Monitor's dedicated POCA implications flag.</dd>
+        <dt>PRA SS1/23</dt><dd>The Prudential Regulation Authority's Supervisory Statement 1/23 (May 2023), the primary UK regulatory standard governing AI/ML models at firms such as AWB.</dd>
+        <dt>Prompt Engineering</dt><dd>The practice of designing LLM input instructions to reliably produce structured, accurate outputs, used for tasks such as financial ratio extraction in AWB's Credit Document Analyser.</dd>
+        <dt>Prompt Hash</dt><dd>The SHA-256 hash of an LLM system prompt plus user template, verified at service start so a Deployment Gate blocks production unless the running hash matches an approved one.</dd>
+        <dt>Prompt Injection</dt><dd>An attack in which malicious instructions embedded in retrieved content manipulate an agent's reasoning, countered at AWB by input sanitisation and the ToolCallValidator.</dd>
+        <dt>PSI (Population Stability Index)</dt><dd>A metric comparing the current score distribution to the training baseline, with AWB's thresholds at PSI &lt; 0.10 (GREEN), 0.10–0.25 (AMBER), and &gt; 0.25 (RED, mandatory recalibration).</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="R">
+      <h2>R</h2>
+      <dl>
+        <dt>RAG (Retrieval-Augmented Generation)</dt><dd>An architecture retrieving relevant document chunks before generation, the foundation of AWB's Regulatory Knowledge Assistant (MR-2026-038, Chapter 4).</dd>
+        <dt>RAGAS</dt><dd>A framework providing four RAG quality metrics — faithfulness, answer relevancy, context precision, and context recall — with AWB's faithfulness threshold set at ≥ 0.85 as its primary hallucination guard.</dd>
+        <dt>ReAct</dt><dd>An agent architecture interleaving Reason (Thought) and Act steps in a loop, with each Thought logged verbatim as the foundation of AWB's Credit Decision Agent and Agentic RAG engine.</dd>
+        <dt>ReAct Loop</dt><dd>An agent control pattern interleaving reasoning with tool-invoking actions, capped in AWB's Agentic RAG engine at six hops with a 10-second timeout and 0.90 confidence threshold.</dd>
+        <dt>Reciprocal Rank Fusion (RRF)</dt><dd>A technique combining dense and sparse retrieval ranking lists into one ranked list without score normalisation, used in AWB's hybrid pipeline combining pgvector and BM25.</dd>
+        <dt>Regulatory Knowledge Assistant</dt><dd>AWB's production RAG system (MR-2026-038) indexing 47,000 pages of regulatory text, with a 0.65 confidence gate below which it refuses to answer.</dd>
+        <dt>Reliability SLO (ReliabilitySLO)</dt><dd>AWB's agentic-system service-level objective — outcome_match ≥ 0.98, tool_selection_accuracy ≥ 0.995, cost_variance within ±20% — whose breach is treated as a model risk event under PRA SS1/23.</dd>
+        <dt>Reranking</dt><dd>A retrieval refinement step that re-scores candidate chunks with a more precise model, applied by AWB as top-5 reranking before LLM synthesis (Chapter 4).</dd>
+        <dt>RWA (Risk-Weighted Assets)</dt><dd>Exposures multiplied by CRR3 risk weights to give the denominator for regulatory capital ratios, subject to the CRR3 output floor when derived from IRB models.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="S">
+      <h2>S</h2>
+      <dl>
+        <dt>SAR (Suspicious Activity Report)</dt><dd>A mandatory disclosure to the UK National Crime Agency under POCA 2002 s.330, with AWB's AML system maintaining a filing rate of 340 per year while cutting false positives by 80%.</dd>
+        <dt>Semantic Search</dt><dd>Retrieval based on query meaning rather than exact keywords, combined with bounded Neo4j graph traversal in AWB's GraphRAG pipeline for cross-regulatory traceability.</dd>
+        <dt>SHAP (SHapley Additive exPlanations)</dt><dd>A model-agnostic explainability framework (Lundberg &amp; Lee, 2017) used by AWB to satisfy PRA SS1/23 and FCA explainability obligations across credit, fraud, and churn models.</dd>
+        <dt>SICR (Significant Increase in Credit Risk)</dt><dd>The IFRS 9 trigger moving an account from Stage 1 to Stage 2, determined at AWB through 12 deterministic indicators covering 95% of accounts with LLM-assisted RAG handling the rest.</dd>
+        <dt>SR 11-7</dt><dd>The 2011 US Federal Reserve/OCC model risk management guidance, used in Chapter 10 as a historical comparison point before being superseded by SR 26-2 in April 2026.</dd>
+        <dt>SR 26-2</dt><dd>The principles-based US model risk management standard issued jointly by the Federal Reserve, OCC, and FDIC on 17 April 2026, replacing SR 11-7 and SR 21-8.</dd>
+        <dt>Stage Migration</dt><dd>The movement of a credit account between IFRS 9 impairment stages, requiring analyst approval at AWB before any LLM-assisted edge-case change commits to T24.</dd>
+        <dt>Stress Testing</dt><dd>The practice of projecting capital, liquidity, or credit metrics under adverse scenarios, covered through the PRA Concurrent Stress Test and the Bank of England's CBES.</dd>
+        <dt>Supersession</dt><dd>The process by which a newer regulatory publication replaces an older one, with AWB's supersession detector marking superseded documents within 24 hours of detection.</dd>
+        <dt>System Prompt</dt><dd>The instruction set establishing an LLM's role and constraints, hashed by AWB via SHA-256 and verified at service start as a deployment gate control.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="T">
+      <h2>T</h2>
+      <dl>
+        <dt>T24</dt><dd>Temenos T24, AWB's core banking platform, read via nightly data extracts and written back via the AWB Data Services API using idempotent write patterns.</dd>
+        <dt>Three-Line Defence (Three Lines of Defence)</dt><dd>The standard financial services control model of first, second, and third lines of defence, within which all AWB AI systems operate under FCA SYSC 6.3.</dd>
+        <dt>Token</dt><dd>The basic unit of text an LLM processes, with AWB's context-window decisions and per-run cost governance both denominated in tokens.</dd>
+        <dt>Tokenization</dt><dd>The process of converting raw text into tokens, underlying AWB's context-window limits and the per-run token limits enforced by its AgentRunBudget dataclass.</dd>
+        <dt>Tool Calling</dt><dd>The mechanism by which an LLM-driven agent invokes external functions, governed at AWB by a typed Tool Registry restricting an agent to its registered, budgeted tools.</dd>
+        <dt>Tool Registry</dt><dd>A typed dictionary of ToolSpec objects mapping every callable tool to its type, call limits, and timeout, with an AWB agent only able to call tools in its registered registry.</dd>
+        <dt>Trajectory</dt><dd>The complete ordered sequence of reasoning and tool-calling steps an agent takes in one run, evaluated at AWB via the TrajectoryScorer against GoldenTrajectory references.</dd>
+        <dt>TrajectoryScorer</dt><dd>AWB's evaluation component that replays each AgentRun against its golden trajectory across outcome_match, trajectory_adherence, and tool_argument_fidelity.</dd>
+        <dt>TrajectoryTrace</dt><dd>A signed, replayable record of one multi-step agent run, with each step tagged for source validation and sign() making the trace tamper-evident for audit.</dd>
+        <dt>Transformer</dt><dd>The neural network architecture underlying modern LLMs, given the book's deep technical treatment in Chapter 2 before later chapters treat LLM selection as a strategic decision.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="V">
+      <h2>V</h2>
+      <dl>
+        <dt>Vector Database</dt><dd>A database optimised for querying high-dimensional embedding vectors by similarity, with AWB choosing pgvector over ChromaDB in most production systems to keep the audit trail within PostgreSQL.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="W">
+      <h2>W</h2>
+      <dl>
+        <dt>Watchlist</dt><dd>A monitoring list of borrowers flagged for heightened credit surveillance, with a director change at a watchlist borrower one of AWB's 12 deterministic SICR indicators.</dd>
+      </dl>
+    </section>
+
+    <section class="letter" id="X">
+      <h2>X</h2>
+      <dl>
+        <dt>XBRL</dt><dd>eXtensible Business Reporting Language, the structured data format mandated by the EBA for COREP submissions, used by AWB with EBA Taxonomy 4.0 via the BEEDS system.</dd>
+      </dl>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../index.html">← Back to companion repository</a>
+  </div>
+</footer>
+
+</body>
+</html>
